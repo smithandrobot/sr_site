@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+
+	<%- @getBlock('meta').toHTML(); %>
+	<%- @getBlock('styles').toHTML(); %>
+</head>	
+
+<body>
+
+	<nav>
+		<ul>
+			<% for page in @getCollection('pages').toJSON(): %>
+				<li>
+					<%= page.title %>
+				</li>
+			<% end %>
+		</ul>
+	</nav>
+
+	
+	<%- @content %>
+
+	<%- @getBlock('scripts').toHTML(); %>
+</body>
+</html>

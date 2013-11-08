@@ -1,0 +1,5 @@
+<div class="carousel">
+	<% for slide in @getCarouselSlides(@document.title).toJSON(): %>
+		<%- slide.contentRendered %>
+	<% end %>
+</div>
