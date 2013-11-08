@@ -1,4 +1,4 @@
-# Your [DocPad](http://docpad.org) Project
+sr_site
+=======
 
-## License
-Copyright &copy; 2013+ All rights reserved.
+Smith &amp; Robot Site
