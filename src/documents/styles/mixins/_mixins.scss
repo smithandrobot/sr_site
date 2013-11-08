@@ -1,0 +1,24 @@
+@mixin clearfix($method: table) {
+	@if $method == table {
+		@include clearfix-table;
+	} @else if $method == overflow {
+		@include clearfix-overflow;
+	}
+}
+
+@mixin clearfix-overflow {
+	overflow: hidden;
+}
+
+@mixin clearfix-table {
+	*zoom: 1; // old ie
+
+	&:before, &:after {
+		display: table;
+		content: ' ';
+	}
+
+	&:after {
+		clear: both;
+	}
+}

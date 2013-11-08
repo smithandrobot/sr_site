@@ -1,0 +1,22 @@
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+.pageContainer {
+	max-width: 960px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+header[role="banner"] {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	z-index: 100;
+}

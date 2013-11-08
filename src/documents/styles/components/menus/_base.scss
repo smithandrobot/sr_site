@@ -1,0 +1,12 @@
+.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none; // usually needed
+
+	@include clearfix();
+
+	span, a {
+		color: inherit;
+		display: block;
+	}
+}

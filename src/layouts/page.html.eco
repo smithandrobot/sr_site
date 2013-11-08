@@ -2,7 +2,6 @@
 layout: default
 ---
 
-<h1><%= @document.title %></h1>
-<%- @content %>
-
-
+<div class="typeset">
+	<%- @content %>
+</div>

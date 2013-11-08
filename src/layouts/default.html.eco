@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js">
 <head>
+	<title>Smith &amp; Robot</title>
 
 	<%- @getBlock('meta').toHTML(); %>
 	<%- @getBlock('styles').toHTML(); %>
@@ -8,18 +9,34 @@
 
 <body>
 
-	<nav>
-		<ul>
-			<% for page in @getCollection('pages').toJSON(): %>
-				<li>
-					<%= page.title %>
-				</li>
-			<% end %>
-		</ul>
-	</nav>
+	<header role="banner">
+		<nav class="navbar"><div class="pageContainer">
+			<ul class="menu menu--horizontal menuSkin--main">
+				<% for page in @getCollection('pages').toJSON(): %>
+					<li class="menu-item">
+						<label for="<%= page.id %>" class="toggle-toggler">
+							<%= page.title %>
+						</label>
+					</li>
+				<% end %>
+			</ul>
+		</div></nav>
 
+		<div class="pageContainer">
+			<% for page in @getCollection('pages').toJSON(): %>
+				<input type="checkbox" class="toggle-toggle" id="<%= page.id %>" value="<%= page.id %>">
+				<div class="toggle-toggled">
+					<%- page.contentRendered %><br/>
+				</div>
+			<% end %>
+		</div>
+	</header>
 	
 	<%- @content %>
+
+	<footer role="contentinfo">
+		<p class="text-center">Copyright 2013 Smith &amp; Robot</p>
+	</footer>
 
 	<%- @getBlock('scripts').toHTML(); %>
 </body>
