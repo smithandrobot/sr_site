@@ -1,4 +1,6 @@
 .navbar {
+	-webkit-transform: translate3d(0, 0, 0); // fix flickering on iOS
+	
 	background: black;
 	padding: 0 1em;
 	position: relative;
