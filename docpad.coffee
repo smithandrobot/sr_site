@@ -22,7 +22,20 @@ docpadConfig = {
 				'/scripts/owl.carousel.min.js',
 				'/scripts/script.js',
 				'/scripts/toggle.js'
-			])	
+			])
+
+	plugins:
+		opengraph:
+			defaults:
+				'og:image': 'abc.png'
+				'og:description': 'This is swell'
+				'og:url': (model) ->
+					model.get('url')
+				foo: 'bar'
+				url: (model) ->
+					model.get('url')
+				description: (model) ->
+					'test ' + model.get('title')
 
 	collections:
 		pages: ->
