@@ -2,21 +2,17 @@
 	box-sizing: border-box;
 }
 
+body {
+	-webkit-transform: translate(0,0);
+}
+
 img {
 	max-width: 100%;
 }
 
 .pageContainer {
+	width: 100%;
 	max-width: 960px;
 	padding: 0 10px;
 	margin: 0 auto;
-}
-
-header[role="banner"] {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-
-	z-index: 100;
 }

@@ -10,26 +10,19 @@
 <body>
 
 	<header role="banner">
-		<nav class="navbar"><div class="pageContainer">
-			<ul class="menu menu--horizontal menuSkin--main">
+		<nav class="navbar"><div class="pageContainer toggle-container">
+			<ul class="menu menu--horizontal menuSkin--main menuSkin--toggle">
 				<% for page in @getCollection('pages').toJSON(): %>
-					<li class="menu-item">
-						<label for="<%= page.id %>" class="toggle-toggler">
-							<%= page.title %>
-						</label>
+					<li class="menu-item" data-target="<%= page.id %>">
+						<div><%= page.title %></div>
+
+						<div class="toggled" data-target="<%= page.id %>">
+							<%- page.contentRendered %>
+						</div>
 					</li>
 				<% end %>
 			</ul>
 		</div></nav>
-
-		<div class="pageContainer">
-			<% for page in @getCollection('pages').toJSON(): %>
-				<input type="checkbox" class="toggle-toggle" id="<%= page.id %>" value="<%= page.id %>">
-				<div class="toggle-toggled">
-					<%- page.contentRendered %><br/>
-				</div>
-			<% end %>
-		</div>
 	</header>
 	
 	<%- @content %>

@@ -1,6 +1,0 @@
-.toggle-toggle {
-	display: none;
-
-	+ .toggle-toggled { display: none; }
-	&:checked + .toggle-toggled { display: block; }
-}
