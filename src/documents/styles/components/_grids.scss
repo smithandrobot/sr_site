@@ -4,3 +4,16 @@ $grid-columns:		5;
 .grid-container {
 	margin-left: -$grid-padding;
 }
+
+[class*='grid-column-'] {
+	float: left;
+	padding-left: $grid-padding;
+}
+
+@for $large from 1 through $grid-columns {
+	@for $small from 1 through $large {
+		.grid-column-#{$small}-#{$large} {
+			width: $small/$large * 100%;
+		}
+	}
+}
