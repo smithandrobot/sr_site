@@ -13,10 +13,6 @@ module.exports = (BasePlugin) ->
         writeBefore: (opts) ->
             docPad = @docPad
             config = @getConfig()
-            templateData = docpad.getTemplateData()
-            siteUrl = templateData.site.url
-            siteSummary = templateData.site.description
-
             pristine = config.defaults
 
             for model in opts.collection.models
@@ -57,23 +53,12 @@ module.exports = (BasePlugin) ->
                         model.set('contentRendered', content)
 
 
+
         createScriptTag: (value) ->
             "\n\t<script src=\"#{value}\"></script>"
 
-        createScriptTags: (values) ->
-            self = @
-            values.map (value) ->
-                self.createScriptTag(value)
-            .join('')
-
         createLinkTag: (value) ->
             "\n\t<link rel=\"stylesheet\" href=\"#{value}\">"
-
-        createLinkTags: (values) ->
-            self = @
-            values.map (value) -> 
-                self.createLinkTag(value)
-            .join('')
 
         createPropertyTag: (key, value) ->
             "\n\t<meta property=\"#{key}\" content=\"#{value}\">"
