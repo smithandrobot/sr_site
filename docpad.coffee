@@ -8,13 +8,18 @@ docpadConfig = {
 		insertCarousel: (name) ->
 			@getCollection('carousels').findOne({title: name}).getOutContent()
 		getCarouselSlides: (name) ->
-			@getCollection('slides').findAllLive({carousel: name})
+			@getCollection('slides').findAll({carousel: name})
 
 	events:
 		populateCollections: (opts) ->
-			@docpad.getBlock('styles').add(['/styles/styles.css'])
+			@docpad.getBlock('styles').add([
+				'/styles/owl.carousel.css',
+				'/styles/owl.theme.css',
+				'/styles/styles.css'
+			])
 			@docpad.getBlock('scripts').add([
 				'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+				'/scripts/owl.carousel.min.js',
 				'/scripts/script.js',
 				'/scripts/toggle.js'
 			])	
