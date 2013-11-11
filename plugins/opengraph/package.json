@@ -28,5 +28,8 @@
     "peerDependencies": {
         "docpad": "6"
     },
+    "dependencies": {
+        "extend": "1.2.1"
+    },
     "main": "opengraph.plugin.coffee"
 }
