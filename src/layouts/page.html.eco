@@ -2,6 +2,6 @@
 layout: default
 ---
 
-<div class="typeset">
+<div class="pageContainer typeset">
 	<%- @content %>
 </div>

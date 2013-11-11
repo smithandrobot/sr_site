@@ -3,6 +3,7 @@
 <head>
 	<title>Smith &amp; Robot</title>
 
+	<meta name="viewport" content="width=device-width">
 	<%- @getBlock('meta').toHTML(); %>
 	<%- @getBlock('styles').toHTML(); %>
 </head>	
