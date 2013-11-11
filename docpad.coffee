@@ -12,7 +12,12 @@ docpadConfig = {
 
 	events:
 		populateCollections: (opts) ->
-			@docpad.getBlock('styles').add(['/styles/styles.css'])		
+			@docpad.getBlock('styles').add(['/styles/styles.css'])
+			@docpad.getBlock('scripts').add([
+				'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+				'/scripts/script.js',
+				'/scripts/toggle.js'
+			])	
 
 	collections:
 		pages: ->
