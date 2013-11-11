@@ -1,15 +1,8 @@
-.carousel {
+.owl-item {
 	position: relative;
+	left: 80px;
+	padding: 0 50px;
+
+	&.active { left: 0; }
+	&.active + .owl-item { left: -80px; }
 }
-
-.carousel-slide {
-	position: absolute;
-	top: 0;
-	left: 90%;
-
-	background: grey;
-	z-index: -1;
-
-	&:first-child { position: static; }
-}
-
