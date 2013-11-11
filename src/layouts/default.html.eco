@@ -29,7 +29,7 @@
 	<%- @content %>
 
 	<footer role="contentinfo">
-		<p class="text-center">Copyright 2013 Smith &amp; Robot</p>
+		<p class="text-center">Copyright <%= new Date().getFullYear() %> Smith &amp; Robot</p>
 	</footer>
 
 	<%- @getBlock('scripts').toHTML(); %>
