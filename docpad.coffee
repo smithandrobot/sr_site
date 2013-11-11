@@ -29,19 +29,19 @@ docpadConfig = {
 			@getCollection('database').findAllLive({relativeDirPath: 'content'}, [order: 1]).on 'add', (model) ->
 				model.setMetaDefaults({
 					layout: 'content'
-					# write: false
+					write: false
 				})
 		carousels: ->
 			@getCollection('database').findAllLive({relativeDirPath: 'carousels'}, [order: 1]).on 'add', (model) ->
 				model.setMetaDefaults({
 					layout: 'carousel'
-					# write: false
+					write: false
 				})
 		slides: ->
 			@getCollection('database').findAllLive({relativeDirPath: 'slides'}).on 'add', (model) ->
 				model.setMetaDefaults({
 					layout: 'slide'
-					# write: false
+					write: false
 				})
 }
 
