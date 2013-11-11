@@ -18,10 +18,23 @@ module.exports = (BasePlugin) ->
             for model in opts.collection.models
                 if model.get('outExtension') == 'html'
                     # console.log(model)
-                    # todo: preserve all scripts/styles
+                    # preserve all scripts/styles
+                    scripts = []
+                    styles = []
+                    scripts = scripts.concat pristine.scripts if pristine.scripts
+                    if (model.get('headtags'))
+                        scripts = scripts.concat model.get('headtags').scripts if model.get('headtags').scripts
+
+                    styles = styles.concat pristine.styles?(model) ? pristine.styles if pristine.styles
+                    if (model.get('headtags'))
+                        styles = styles.concat model.get('headtags').styles if model.get('headtags').styles
 
                     # shallow clone per model
                     headertags = extend({}, pristine, model.get('headtags'))
+
+                    # remove scripts and styles
+                    delete headertags.scripts if headertags.scripts
+                    delete headertags.styles if headertags.styles
 
                     # split tags between header tags and tags before </body>
                     headcontent = ''
@@ -31,20 +44,18 @@ module.exports = (BasePlugin) ->
                         value = value?(model) ? value # function results or value
 
                         # check diffent header tag types
-                        if (key == 'style')
-                            headcontent += @createLinkTag(value)
-                        else if (key == 'styles')
-                            headcontent += @createLinkTags(value)
-                        else if (key == 'script')
-                            footcontent += @createScriptTag(value)
-                        else if (key == 'scripts')
-                            footcontent += @createScriptTags(value)
-                        else if (key.substr(0,3) == 'og:' )
+                        if (key.substr(0,3) == 'og:' )
                             headcontent += @createPropertyTag(key, value)
                         else if (key.substr(0,3) == 'fb:' )
                             headcontent += @createPropertyTag(key, value)
                         else
                             headcontent += @createMetaTag(key, value)
+
+                    for style in styles
+                        headcontent += @createLinkTag(style)
+                    for script in scripts
+                        footcontent += @createScriptTag(script)
+                        
 
                     content = model.get('contentRendered')
                     if content
