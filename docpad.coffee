@@ -10,26 +10,25 @@ docpadConfig = {
 		getCarouselSlides: (name) ->
 			@getCollection('slides').findAll({carousel: name})
 
-	events:
-		populateCollections: (opts) ->
-			@docpad.getBlock('styles').add([
-				'/styles/owl.carousel.css',
-				'/styles/owl.theme.css',
-				'/styles/styles.css'
-			])
-			@docpad.getBlock('scripts').add([
-				'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
-				'/scripts/owl.carousel.min.js',
-				'/scripts/script.js',
-				'/scripts/toggle.js'
-			])
-
 	plugins:
 		opengraph:
 			defaults:
-				'og:image': 'abc.png'
-				'og:description': 'This is swell'
-				'og:url': (model) ->
+				scripts: [
+					'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+					'/scripts/owl.carousel.min.js',
+					'/scripts/script.js',
+					'/scripts/toggle.js'
+				]
+				styles: (model) ->
+					[
+						'/styles/owl.carousel.css',
+						'/styles/owl.theme.css',
+						'/styles/styles.css',
+						"/styles/per-doc/#{model.id}.css"
+					]
+				og:image: 'abc.png'
+				og:description: 'This is swell'
+				og:url: (model) ->
 					model.get('url')
 				foo: 'bar'
 				url: (model) ->
