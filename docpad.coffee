@@ -3,7 +3,8 @@
 
 # Define the DocPad Configuration
 docpadConfig = {
-	# ...
+	renderPasses: 2 # needed for carousel includes
+
 	templateData:
 		insertCarousel: (name) ->
 			@getCollection('carousels').findOne({title: name}).getOutContent()
@@ -15,16 +16,16 @@ docpadConfig = {
 			defaults:
 				scripts: [
 					'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
-					'/scripts/owl.carousel.min.js',
-					'/scripts/script.js',
-					'/scripts/toggle.js'
+					'scripts/owl.carousel.min.js',
+					'scripts/script.js',
+					'scripts/toggle.js'
 				]
 				styles: (model) ->
 					[
-						'/styles/owl.carousel.css',
-						'/styles/owl.theme.css',
-						'/styles/styles.css',
-						"/styles/per-doc/#{model.id}.css"
+						'styles/owl.carousel.css',
+						'styles/owl.theme.css',
+						'styles/styles.css',
+						"styles/per-doc/#{model.id}.css"
 					]
 				og:image: 'abc.png'
 				og:description: 'This is swell'
