@@ -25,8 +25,8 @@ module.exports = (BasePlugin) ->
                     delete headertags.styles if headertags.styles
                     
                     # preserve all scripts/styles
-                    scripts = @getScripts(pristine, model)
-                    styles = @getStyles(pristine, model)
+                    scripts = @getTags(pristine, model, 'scripts')
+                    styles = @getTags(pristine, model, 'styles')
 
                     # split tags between header tags and tags before </body>
                     headcontent = ''
@@ -55,21 +55,13 @@ module.exports = (BasePlugin) ->
                         content = content.replace(/<\/body>/, footcontent + '</body>')
                         model.set('contentRendered', content)
 
-        getScripts: (pristine, model) ->
-            scripts = []
-            scripts = scripts.concat pristine.scripts?(model) ? pristine.scripts if pristine.scripts
+        getTags: (pristine, model, key) ->
+            tags = []
+            tags = tags.concat pristine[key]?(model) ? pristine[key] if pristine[key]
             if (model.get('headtags'))
-                scripts = scripts.concat model.get('headtags').scripts if model.get('headtags').scripts
+                tags = tags.concat model.get('headtags')[key] if model.get('headtags')[key]
 
-            scripts
-
-        getStyles: (pristine, model) ->
-            styles = []
-            styles = styles.concat pristine.styles?(model) ? pristine.styles if pristine.styles
-            if (model.get('headtags'))
-                styles = styles.concat model.get('headtags').styles if model.get('headtags').styles
-
-            styles
+            tags
 
         createScriptTag: (value) ->
             "\n\t<script src=\"#{value}\"></script>"
