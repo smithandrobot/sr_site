@@ -12,7 +12,12 @@
     "docpad-plugin-eco": "~2.0.2",
     "docpad-plugin-livereload": "~2.5.3",
     "docpad-plugin-sass": "~2.6.1",
-    "docpad-plugin-ghpages": "~2.4.0"
+    "docpad-plugin-ghpages": "~2.4.0",
+
+    "extend": "1.2.1",
+    "mkdirp": "0.3.5",
+    "safefs": "3.3.1",
+    "taskgroup": "3.3.1"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {

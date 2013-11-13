@@ -1,0 +1,37 @@
+{
+    "name": "docpad-plugin-redirection",
+    "version": "2.0.0",
+    "description": "DocPad plugin that adds the ability to render open graph tags",
+    "homepage": "https://github.com/smithandrobot/docpad-plugin-opengraph",
+    "keywords": [
+        "docpad",
+        "docpad-plugin",
+        "opengraph"
+    ],
+    "author": "Copyright holders David david@smithandrobot.com (smithandrobot.com)",
+    "maintainers": [
+        "Your name david@smithandrobot.com (https://github.com/smithandrobot)"
+    ],
+    "contributors": [
+        "Your name <your email> (your github url)"
+    ],
+    "bugs": {
+        "url": "https://github.com/yourgithubusername/docpad-plugin-yourpluginname/issues"
+    },
+    "repository" : {
+        "type": "git",
+        "url": "https://github.com/yourgithubusername/docpad-plugin-yourpluginname.git"
+    },
+    "engines" : {
+        "node": ">=0.8"
+    },
+    "peerDependencies": {
+        "docpad": "6"
+    },
+    "dependencies": {
+        "mkdirp": "0.3.5",
+        "safefs": "3.3.1",
+        "taskgroup": "3.3.1"
+    },
+    "main": "redirection.plugin.coffee"
+}
