@@ -43,7 +43,6 @@
 	
 		<%- @content %>
 		
-		<!-- <p class="text-center">&copy; Copyright <%= new Date().getFullYear() %> Smith &amp; Robot</p> -->
 	</div>
 
 	<%- @getBlock('scripts').toHTML(); %>
