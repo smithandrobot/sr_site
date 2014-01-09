@@ -1,0 +1,7 @@
+---
+layout: content_pane
+---
+<h1><%= @document.title %></h1>
+
+<%- @content %>
+

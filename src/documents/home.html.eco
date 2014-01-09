@@ -13,116 +13,41 @@
 
 <body>
 	<div class="l-pageContainer">
-		<header role="banner">
+		<header role="banner" class="l-positionContext">
 			<div class="grid">
-				<div class="grid-cell-1-1 grid-cell-10-12-medium grid-push-1-12-medium l-positionContext">
-					<div class="grid">
-						<div class="grid-cell-1-1 grid-cell-1-4-medium text-center text-left-medium">
-							<img src="/images/logo.png" width="150" />
-						</div>
-						<div class="grid-cell-1-1 grid-cell-3-4-medium">
-							<nav>
-								<ul id="SectionMenu" class="menu menu--horizontal menuSkin--sections">
-									<li class="menu-item" data-target="#123">
-										<span>About</span>
-									</li><li class="menu-item" data-target="#124">
-										<span>Contact</span>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
+				<div class="grid-cell-10-12 grid-push-1-12 text-center text-left-medium">
+					<img src="/images/logo.png" width="150" />
+
+					<nav>
+						<ul id="SectionMenu" class="menu menu--horizontal menuSkin--sections">
+							<% for panel in @getCollection('panels').toJSON(): %>
+								<li class="menu-item" data-target="#<%= panel.id %>">
+									<span><%= panel.menuTitle %></span>
+								</li>	
+							<% end %>
+						</ul>
+					</nav>
 				</div>
 			</div>
 		</header>
 
 		<div class="sectionPanes">
 			<div class="grid">
-				<div class="grid-cell-1-1 grid-cell-10-12-medium grid-push-1-12-medium">
-					<article class="contentPane" id="123">
-						<div class="hr"></div>
-						<div class="contentPane-closeButton"><img src="/images/close.png" width="28" /></div>
-						<h1>Digital First</h1>
-
-						<div class="grid">
-							<div class="grid-cell-1-1 grid-cell-4-10-medium">
-								<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui.</p>
-								<p>Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus.</p>
-							</div>
-							<div class="grid-cell-1-1 grid-cell-3-10-medium">
-								<img src="/images/chad-currie-smith-and-robot.jpg" width="100%" class="blockElement" />
-								<p><span class="textUrgent">Chad Currie</span><span class="textImportant">, Creative Director.</span> Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper. Nulla <a href="#">vitae elit libero</a>, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui.</p>
-							</div>
-							<div class="grid-cell-1-1 grid-cell-3-10-medium">
-								<img src="/images/david-ford-smith-and-robot.jpg" width="100%" class="blockElement" />
-								<p><span class="textUrgent">David Ford</span><span class="textImportant">, Technology Director.</span> Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper. Nulla <a href="#1">vitae elit libero</a>, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui.</p>
-							</div>
-						</div>
-					</article>
-
-					<article class="contentPane" id="124">
-						<div class="hr"></div>
-						<div class="contentPane-closeButton"><img src="/images/close.png" width="28" /></div>
-						<h1>Ready to Listen</h1>
-
-						<div class="grid">
-							<div class="grid-cell-1-1 grid-cell-1-2-medium">
-								<form>
-									<p>
-										<label for="emailField" class="visuallyHidden">Your Email Address</label>
-										<input type="email" placeholder="Your Email Address" name="email" id="emailField" class="blockElement" />
-									</p>
-
-									<p>
-										<label for="messageField" class="visuallyHidden">Your Message</label>
-										<textarea name="message" id="messageField" placeholder="Your Message" class="blockElement" ></textarea>
-									</p>
-
-									<p>
-										<input type="submit" value="Send Message" class="btn btnSkinPrimary blockElement" />
-									</p>
-								</form>
-							</div>
-							<div class="grid-cell-1-1 grid-cell-1-2-medium">
-								<p>
-									<a href="http://maps.google.com"><img src="/images/staticmap.png" width="100%"></a><br/>
-
-									Smith &amp; Robot, LLC<br/>
-									3410 Far West Blvd, Suite 301<br/>
-									Austin, Texas 78731<br/>
-									1 (512) 696-0418<br/>
-								</p>
-
-								<p>
-									<img src="images/icons/email.png" width="16" class="inlineIcon" />://<a href="mailto:introductions@smithandrobot.com">introductions@smithandrobot.com</a><br/>
-									<img src="images/icons/twitter.png" width="16" class="inlineIcon" />://<a href="https://twitter.com/smithandrobot">@smithandrobot</a><br/>
-									<img src="images/icons/facebook.png" width="16" class="inlineIcon" />://<a href="https://www.facebook.com/Smith.Robot">Smith.Robot</a><br/>
-									<img src="images/icons/linkedin.png" width="16" class="inlineIcon" />://<a href="http://www.linkedin.com/company/smith-&amp;-robot_2">smith-&amp;-robot_2</a>
-								</p>
-							</div>
-						</div>
-					</article>
+				<div class="grid-cell-10-12 grid-push-1-12">
+					<% for panel in @getCollection('panels').toJSON(): %>
+						<%- panel.contentRendered %>
+					<% end %>
 				</div>
 			</div>
 		</div>
 
 		<article class="contentPane">
 			<div class="grid">
-				<div class="grid-cell-1-1 grid-cell-10-12-medium grid-push-1-12-medium">
+				<div class="grid-cell-10-12 grid-push-1-12">
 					<div class="hr"></div>
 
-					<h1>
-						Slide title
-						<small>then a label inline</small>
-					</h1>
 					<%- @insertCarousel('Portfolio') %>
-
 					<br/><!-- todo: remove -->
-
-					<h1>
-						Slide title
-						<small>then a label inline</small>
-					</h1>
 					<%- @insertCarousel('Portfolio') %>
 				</div>
 			</div>

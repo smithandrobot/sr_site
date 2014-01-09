@@ -1,0 +1,6 @@
+<article class="contentPane" id="<%= @document.id %>">
+	<div class="hr"></div>
+	<div class="contentPane-closeButton"><img src="/images/close.png" width="28" /></div>
+
+	<%- @content %>
+</article>

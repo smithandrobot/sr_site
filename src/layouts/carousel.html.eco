@@ -1,3 +1,10 @@
+<h2 class="h1">
+	<%= @document.title %>
+	<% if @document.subtitle: %>
+		<small><%= @document.subtitle %></small>
+	<% end %>
+</h2>
+
 <div class="carousel">
 	<% for slide in @getCarouselSlides(@document.title).toJSON(): %>
 		<%- slide.contentRendered %>

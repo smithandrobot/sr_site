@@ -44,6 +44,12 @@ docpadConfig = {
 					layout: 'content'
 					write: false
 				})
+		panels: ->
+			@getCollection('database').findAllLive({relativeDirPath: 'panels'}, [order: 1]).on 'add', (model) ->
+				model.setMetaDefaults({
+					layout: 'panel'
+					write: false
+				})
 		carousels: ->
 			@getCollection('database').findAllLive({relativeDirPath: 'carousels'}, [order: 1]).on 'add', (model) ->
 				model.setMetaDefaults({
