@@ -1,0 +1,19 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="numbmer"],
+textarea {
+	padding: 1em;
+
+	border: none;
+	background: #EEE;
+	font-size: 1em;
+	color: #999;
+}
+
+textarea { min-height: 15em; }
+
+::-webkit-input-placeholder { color: #ccc; }
+:-moz-placeholder { color: #ccc; }
+::-moz-placeholder { color: #ccc; }
+:-ms-input-placeholder { color: #ccc; }

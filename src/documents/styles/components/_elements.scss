@@ -1,0 +1,14 @@
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+p { margin: 1em 0; }
+p:first-child { margin-top: 0; }
+
+a {
+	color: $urgent;
+	text-decoration: none;
+}
+a:visited { color: lighten($urgent, 20%); }
+a:hover { text-decoration: underline; }

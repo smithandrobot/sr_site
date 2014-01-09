@@ -1,0 +1,27 @@
+.menuSkin--sections {
+
+	.menu-item {
+		width: 50%;
+		padding: 0 2em;
+
+		text-align: center;
+		color: $urgent;
+		border-radius: 3px 3px 0 0;
+		font-size: 1.5em;
+		font-family: adelle, helvetica, arial, sans-serif;
+		line-height: 2.25;
+		cursor: pointer;
+
+		-webkit-transition: background 0.2s ease, color 0.2s ease;
+
+		@media screen and (min-width: 600px) {
+			width: auto;
+		}
+	}
+
+	.menu-item.isActive,
+	.menu-item:hover {
+		background: #444;
+		color: white;
+	}
+}

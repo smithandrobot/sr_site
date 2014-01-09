@@ -10,4 +10,3 @@ Run `fab deploy` to deploy to Github Page
 
 ## Todo
 - change default output paths
-- redirect urls

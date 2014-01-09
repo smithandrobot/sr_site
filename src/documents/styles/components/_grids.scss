@@ -1,19 +1,30 @@
 $grid-padding:		1em;
-$grid-columns:		5;
+$grid-columns:		10;
 
-.grid-container {
+.grid {
+	@include clearfix;
 	margin-left: -$grid-padding;
 }
 
-[class*='grid-column-'] {
+[class*='grid-cell-'] {
 	float: left;
 	padding-left: $grid-padding;
 }
 
 @for $large from 1 through $grid-columns {
 	@for $small from 1 through $large {
-		.grid-column-#{$small}-#{$large} {
+		.grid-cell-#{$small}-#{$large} {
 			width: $small/$large * 100%;
+		}
+	}
+}
+
+@media screen and (min-width: 600px) {
+	@for $large from 1 through $grid-columns {
+		@for $small from 1 through $large {
+			.grid-cell-#{$small}-#{$large}-medium {
+				width: $small/$large * 100%;
+			}
 		}
 	}
 }

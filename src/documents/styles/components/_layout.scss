@@ -2,13 +2,23 @@
 	box-sizing: border-box;
 }
 
-img {
-	max-width: 100%;
+.l-pageContainer { 
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0 0.5em;
 }
 
-.pageContainer {
+.blockElement {
+	display: block;
 	width: 100%;
-	max-width: 960px;
-	padding: 0 10px;
-	margin: 0 auto;
+}
+
+header[role=banner] { position: relative; }
+
+@media screen and (min-width: 600px) {
+	#SectionMenu {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
 }

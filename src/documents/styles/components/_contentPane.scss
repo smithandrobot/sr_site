@@ -1,0 +1,19 @@
+.sectionPanes {
+	.contentPane {
+		html.js & { display: none; }
+	}
+}
+
+
+.contentPane {
+	padding: 1em 0;
+	border-top: 1px solid $baseText;
+}
+.contentPane--chubby { padding: 2em 0; }
+
+.contentPane-closeButton {
+	float: right;
+	margin-left: 0.5em;
+	cursor: pointer;
+}
+

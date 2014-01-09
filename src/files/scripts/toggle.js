@@ -1,25 +1,27 @@
 (function() {
-	$('.menuSkin--toggle').each(function() {
-		var $menu = $(this),
-			$toggles = $menu.find('.menu-item'),
-			$toggled = $menu.find('.toggled'),
+	$toggles = $('.menu-item[data-target]'),
+	$closers = $('.contentPane-closeButton');
+	$active = null;
+
+	$toggles.click(function() {
+		var $clicked = $(this);
+
+		if ($clicked.is($active)) {
+			$($active.data('target')).slideUp();
 			$active = null;
-
-		$toggles.click(function() {
-			var $clicked = $(this);
-			if ($clicked.is($active)) { 
-				$clicked = null;
-			}
-
-			if ($active) {
-				$toggled.filter('[data-target="' + $active.data('target') + '"]').slideUp();
-			}
-			if ($clicked) {
-				$toggled.filter('[data-target="' + $clicked.data('target') + '"]').slideDown();
-			}
-
+		} else if ($active) {
+			$($active.data('target')).slideUp(function() {
+				$($clicked.data('target')).slideDown();
+				$active = $clicked;
+			});
+		} else {
+			$($clicked.data('target')).slideDown();
 			$active = $clicked;
-			
-		});
-	})
+		}
+	});
+
+	$closers.click(function() {
+		$(this).parents('.contentPane').slideUp();
+		$active = null;
+	});
 })();
