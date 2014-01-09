@@ -1,61 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head class="no-js">
-	<title>Smith &amp; Robot</title>
+---
+layout: default
+---
 
-	<meta name="viewport" content="width=device-width">
-	<%- @getBlock('meta').toHTML(); %>
-	<%- @getBlock('styles').toHTML(); %>
+<article class="contentPane">
+	<div class="grid">
+		<div class="grid-cell-10-12 grid-push-1-12">
+			<div class="hr"></div>
 
-	<script src="http://use.typekit.net/unl8vyi.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>
-</head>
-
-<body>
-	<div class="l-pageContainer">
-		<header role="banner" class="l-positionContext">
-			<div class="grid">
-				<div class="grid-cell-10-12 grid-push-1-12 text-center text-left-medium">
-					<img src="/images/logo.png" width="150" />
-
-					<nav>
-						<ul id="SectionMenu" class="menu menu--horizontal menuSkin--sections">
-							<% for panel in @getCollection('panels').toJSON(): %>
-								<li class="menu-item" data-target="#<%= panel.id %>">
-									<span><%= panel.menuTitle %></span>
-								</li>	
-							<% end %>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
-
-		<div class="sectionPanes">
-			<div class="grid">
-				<div class="grid-cell-10-12 grid-push-1-12">
-					<% for panel in @getCollection('panels').toJSON(): %>
-						<%- panel.contentRendered %>
-					<% end %>
-				</div>
-			</div>
+			<%- @insertCarousel('Portfolio') %>
+			<br/><!-- todo: remove -->
+			<%- @insertCarousel('Portfolio') %>
 		</div>
-
-		<article class="contentPane">
-			<div class="grid">
-				<div class="grid-cell-10-12 grid-push-1-12">
-					<div class="hr"></div>
-
-					<%- @insertCarousel('Portfolio') %>
-					<br/><!-- todo: remove -->
-					<%- @insertCarousel('Portfolio') %>
-				</div>
-			</div>
-		</article>
-
-		<!-- <p class="text-center">&copy; Copyright <%= new Date().getFullYear() %> Smith &amp; Robot</p> -->
 	</div>
-
-	<%- @getBlock('scripts').toHTML(); %>
-</body>
-</html>
+</article

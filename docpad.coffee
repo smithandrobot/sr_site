@@ -20,30 +20,13 @@ docpadConfig = {
 					'/scripts/script.js',
 					'/scripts/toggle.js'
 				]
-				styles: (model) ->
-					[
-						'/styles/owl.carousel.css',
-						'/styles/owl.theme.css',
-						'/styles/styles.css',
-						"/styles/per-doc/#{model.id}.css"
-					]
-				og:image: 'abc.png'
-				og:description: 'This is swell'
-				og:url: (model) ->
-					model.get('url')
-				foo: 'bar'
-				url: (model) ->
-					model.get('url')
-				description: (model) ->
-					'test ' + model.get('title')
+				styles: [
+					'/styles/owl.carousel.css',
+					'/styles/owl.theme.css',
+					'/styles/styles.css',
+				]
 
 	collections:
-		pages: ->
-			@getCollection('database').findAllLive({relativeDirPath: 'content'}, [order: 1]).on 'add', (model) ->
-				model.setMetaDefaults({
-					layout: 'content'
-					write: false
-				})
 		panels: ->
 			@getCollection('database').findAllLive({relativeDirPath: 'panels'}, [order: 1]).on 'add', (model) ->
 				model.setMetaDefaults({

@@ -1,36 +1,50 @@
 <!DOCTYPE html>
-<html class="no-js">
-<head>
+<html>
+<head class="no-js">
 	<title>Smith &amp; Robot</title>
 
 	<meta name="viewport" content="width=device-width">
 	<%- @getBlock('meta').toHTML(); %>
 	<%- @getBlock('styles').toHTML(); %>
-</head>	
+
+	<script src="http://use.typekit.net/unl8vyi.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+</head>
 
 <body>
+	<div class="l-pageContainer">
+		<header role="banner" class="l-positionContext">
+			<div class="grid">
+				<div class="grid-cell-10-12 grid-push-1-12 text-center text-left-medium">
+					<img src="/images/logo.png" width="150" />
 
-	<header role="banner">
-		<nav class="navbar"><div class="pageContainer toggle-container">
-			<ul class="menu menu--horizontal menuSkin--main menuSkin--toggle">
-				<% for page in @getCollection('pages').toJSON(): %>
-					<li class="menu-item" data-target="<%= page.id %>">
-						<div><%= page.title %></div>
+					<nav>
+						<ul id="SectionMenu" class="menu menu--horizontal menuSkin--sections">
+							<% for panel in @getCollection('panels').toJSON(): %>
+								<li class="menu-item" data-target="#<%= panel.id %>">
+									<span><%= panel.menuTitle %></span>
+								</li>	
+							<% end %>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
 
-						<div class="toggled" data-target="<%= page.id %>">
-							<%- page.contentRendered %>
-						</div>
-					</li>
-				<% end %>
-			</ul>
-		</div></nav>
-	</header>
+		<div class="sectionPanes">
+			<div class="grid">
+				<div class="grid-cell-10-12 grid-push-1-12">
+					<% for panel in @getCollection('panels').toJSON(): %>
+						<%- panel.contentRendered %>
+					<% end %>
+				</div>
+			</div>
+		</div>
 	
-	<%- @content %>
-
-	<footer role="contentinfo">
-		<p class="text-center">Copyright <%= new Date().getFullYear() %> Smith &amp; Robot</p>
-	</footer>
+		<%- @content %>
+		
+		<!-- <p class="text-center">&copy; Copyright <%= new Date().getFullYear() %> Smith &amp; Robot</p> -->
+	</div>
 
 	<%- @getBlock('scripts').toHTML(); %>
 </body>
