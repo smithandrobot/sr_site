@@ -8,6 +8,7 @@
 	$('.carousel').owlCarousel({
 		addClassActive: true,
 		navigation: true,
+		pagination: false,
 		rewindNav: false,
 		singleItem: true
 	});

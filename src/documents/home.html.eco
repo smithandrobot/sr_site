@@ -115,16 +115,20 @@
 						Slide title
 						<small>then a label inline</small>
 					</h1>
-					<p>
-						<img src="/images/slides/k12lab.jpg" alt="K12lab.com" class="blockElement" />
-					</p>
+					<%- @insertCarousel('Portfolio') %>
 
-					<p>
-						<img src="/images/slides/thoughtworks.jpg" alt="ThoughtWorks.com" class="blockElement" />
-					</p>
+					<br/><!-- todo: remove -->
+
+					<h1>
+						Slide title
+						<small>then a label inline</small>
+					</h1>
+					<%- @insertCarousel('Portfolio') %>
 				</div>
 			</div>
 		</article>
+
+		<!-- <p class="text-center">&copy; Copyright <%= new Date().getFullYear() %> Smith &amp; Robot</p> -->
 	</div>
 
 	<%- @getBlock('scripts').toHTML(); %>
