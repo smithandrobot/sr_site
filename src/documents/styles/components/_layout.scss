@@ -2,18 +2,20 @@
 	box-sizing: border-box;
 }
 
-.l-pageContainer { 
-	max-width: 1024px;
-	margin: 0 auto;
+.l-pageContainer {
 	padding: 0 0.5em;
+	
+	@media screen and (min-width: 600px) {
+		padding: 0;
+	}
 }
+.l-positionContext { position: relative; }
 
 .blockElement {
 	display: block;
 	width: 100%;
 }
 
-header[role=banner] { position: relative; }
 
 @media screen and (min-width: 600px) {
 	#SectionMenu {

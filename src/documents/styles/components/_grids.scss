@@ -1,5 +1,23 @@
 $grid-padding:		1em;
-$grid-columns:		10;
+$grid-columns:		12;
+
+@mixin gridCell($small, $large, $suffix: '') {
+	@if $suffix != '' {
+		$suffix: "-#{$suffix}";
+	}
+
+	.grid-cell-#{$small}-#{$large}#{$suffix} {
+		width: $small/$large * 100%;
+	}
+
+	.grid-push-#{$small}-#{$large}#{$suffix} {
+		left: $small/$large * 100%;
+	}
+
+	.grid-pull-#{$small}-#{$large}#{$suffix} {
+		left: -$small/$large * 100%;
+	}
+}
 
 .grid {
 	@include clearfix;
@@ -11,20 +29,21 @@ $grid-columns:		10;
 	padding-left: $grid-padding;
 }
 
+[class*='grid-push-'],
+[class*='grid-pull-'] {
+	position: relative;
+}
+
 @for $large from 1 through $grid-columns {
 	@for $small from 1 through $large {
-		.grid-cell-#{$small}-#{$large} {
-			width: $small/$large * 100%;
-		}
+		@include gridCell($small, $large);
 	}
 }
 
 @media screen and (min-width: 600px) {
 	@for $large from 1 through $grid-columns {
 		@for $small from 1 through $large {
-			.grid-cell-#{$small}-#{$large}-medium {
-				width: $small/$large * 100%;
-			}
+			@include gridCell($small, $large, "medium");
 		}
 	}
 }
