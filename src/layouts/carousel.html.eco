@@ -6,7 +6,9 @@
 </h2>
 
 <div class="carousel">
-	<% for slide in @getCarouselSlides(@document.title).toJSON(): %>
-		<%- slide.contentRendered %>
+	<% for basename in @document.slides: %>
+		<%- @getCarouselSlide(basename) %>
 	<% end %>
 </div>
+
+

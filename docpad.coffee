@@ -10,6 +10,8 @@ docpadConfig = {
 			@getCollection('carousels').findOne({title: name}).getOutContent()
 		getCarouselSlides: (name) ->
 			@getCollection('slides').findAll({carousel: name})
+		getCarouselSlide: (basename) ->
+			@getCollection('slides').findOne({basename: basename }).getOutContent()
 
 	plugins:
 		opengraph:
