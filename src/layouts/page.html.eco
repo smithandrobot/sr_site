@@ -1,7 +1,0 @@
----
-layout: default
----
-
-<div class="pageContainer typeset">
-	<%- @content %>
-</div>
