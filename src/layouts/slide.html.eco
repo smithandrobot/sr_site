@@ -1,6 +1,6 @@
 <div class="carousel-slide" data-title="<%= @document.title %>">
 	<div class="carsousel-slide-image">
-		<%- @lazyImg(@document.image) %>
+		<%- @lazyImg(@document.image, @document.width, @document.height) %>
 	</div>
 
 	<div class="carousel-slide-caption">

@@ -10,8 +10,8 @@ docpadConfig = {
 			@getCollection('carousels').findOne({basename: name}).getOutContent()
 		getCarouselSlide: (basename) ->
 			@getCollection('slides').findOne({basename: basename }).getOutContent()
-		lazyImg: (url) ->
-			"<img src=\"/images/loader.gif\" data-src=\"#{url}\" />"
+		lazyImg: (url, width, height) ->
+			"<img src=\"/images/transparent.gif\" data-src=\"#{url}\" width=\"#{width}\" height=\"#{height}\" class=\"lazyLoad\" />"
 
 	plugins:
 		opengraph:
@@ -48,6 +48,10 @@ docpadConfig = {
 					layout: 'slide'
 					write: false
 				})
+
+	environments:
+		development: # default
+			maxAge: false # always refresh
 }
 
 # Export the DocPad Configuration
