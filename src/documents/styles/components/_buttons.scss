@@ -1,9 +1,12 @@
 .btn {
 	padding: 1em;
+
 	background: #ececec;
 	border: none;
 	border-radius: 3px;
 	color: $baseText;
+	font-size: 1em;
+	cursor: pointer;
 }
 
 .btnSkinPrimary {
