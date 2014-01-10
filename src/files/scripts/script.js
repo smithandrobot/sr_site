@@ -13,5 +13,5 @@
 		singleItem: true
 	});
 
-	$('img').unveil();
+	$('img').unveil(200);
 })(jQuery);
