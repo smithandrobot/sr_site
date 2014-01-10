@@ -16,8 +16,11 @@
 
     "extend": "1.2.1",
     "mkdirp": "0.3.5",
-    "safefs": "3.3.1",
+    "safefs": "3.1.0",
     "taskgroup": "3.3.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
