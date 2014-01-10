@@ -7,9 +7,7 @@ docpadConfig = {
 
 	templateData:
 		insertCarousel: (name) ->
-			@getCollection('carousels').findOne({title: name}).getOutContent()
-		getCarouselSlides: (name) ->
-			@getCollection('slides').findAll({carousel: name})
+			@getCollection('carousels').findOne({basename: name}).getOutContent()
 		getCarouselSlide: (basename) ->
 			@getCollection('slides').findOne({basename: basename }).getOutContent()
 

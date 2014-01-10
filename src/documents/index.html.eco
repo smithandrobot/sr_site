@@ -8,9 +8,9 @@ redirects: home.html
 		<div class="grid-cell-10-12 grid-push-1-12">
 			<div class="hr"></div>
 
-			<%- @insertCarousel('Portfolio') %>
+			<%- @insertCarousel('portfolio') %>
 			<br/><!-- todo: remove -->
-			<%- @insertCarousel('Portfolio') %>
+			<%- @insertCarousel('portfolio2') %>
 		</div>
 	</div>
 </article
