@@ -12,4 +12,6 @@
 		rewindNav: false,
 		singleItem: true
 	});
+
+	$('img').unveil();
 })(jQuery);

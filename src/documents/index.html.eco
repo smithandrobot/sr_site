@@ -11,6 +11,8 @@ redirects: home.html
 			<%- @insertCarousel('portfolio') %>
 			<br/><!-- todo: remove -->
 			<%- @insertCarousel('portfolio2') %>
+			<br/>
+			<%- @insertCarousel('highres') %>
 		</div>
 	</div>
-</article
+</article>

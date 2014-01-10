@@ -10,15 +10,18 @@ docpadConfig = {
 			@getCollection('carousels').findOne({basename: name}).getOutContent()
 		getCarouselSlide: (basename) ->
 			@getCollection('slides').findOne({basename: basename }).getOutContent()
+		lazyImg: (url) ->
+			"<img src=\"/images/loader.gif\" data-src=\"#{url}\" />"
 
 	plugins:
 		opengraph:
 			defaults:
 				scripts: [
 					'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
-					'/scripts/owl.carousel.min.js',
-					'/scripts/script.js',
+					'/scripts/lib/jquery.unviel.js',
+					'/scripts/owl.carousel.js',
 					'/scripts/toggle.js'
+					'/scripts/script.js',
 				]
 				styles: [
 					'/styles/owl.carousel.css',
