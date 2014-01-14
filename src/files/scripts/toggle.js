@@ -18,6 +18,9 @@
 			$($clicked.data('target')).slideDown();
 			$active = $clicked;
 		}
+
+		SARMap.resize();
+		SARMap.center();
 	});
 
 	$closers.click(function() {
