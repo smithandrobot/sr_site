@@ -55,6 +55,7 @@
   }
 
   google.maps.event.addDomListener(window, 'load', SARMap.initialize);
+  google.maps.event.addDomListener(window, 'resize', SARMap.center);
 
   // var _gaq=[ ['_setAccount','UA-23810379-1'],['_trackPageview'] ]; // Change UA-XXXXX-X to be your site's ID
   // (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
