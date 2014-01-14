@@ -16,7 +16,7 @@
 		<header role="banner" class="l-positionContext">
 			<div class="grid">
 				<div class="grid-cell-10-12 grid-push-1-12 text-center text-left-medium">
-					<img src="/images/logo.png" width="150" />
+					<img id="logo" src="/images/logo.png" width="125" />
 
 					<nav>
 						<ul id="SectionMenu" class="menu menu--horizontal menuSkin--sections">

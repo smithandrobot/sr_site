@@ -4,6 +4,8 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 	color: $baseText;
+
+	-webkit-font-smoothing: antialiased;
 }
 
 .textUrgent {
@@ -32,9 +34,15 @@ h1, h2, h3, h4, h5, h6,
 	color: $important;
 
 	small {
+		display: block;
 		font-size: 0.5em;
 		font-family: helvetica, arial, sans-serif;
-		font-weight: normal;
+		font-weight: 300;
+		line-height: 1.5em;
+
+		@media screen and (min-width: 600px) {
+			display: inline-block;
+		}
 	}
 }
 
@@ -42,4 +50,6 @@ h1, .h1 {
 	font-size: 2.3em;
 	line-height: 1em;
 	margin: 0 0 0.43em;
+
+	small { font-size: 0.434782609em; }
 }

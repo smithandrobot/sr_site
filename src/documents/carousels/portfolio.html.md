@@ -1,6 +1,6 @@
 ---
 title: Portfolio
-subtitle: then a label inline
+subtitle: then a label inline then a label inline then a label inline
 slides:
     - k12lab
     - thoughtworks

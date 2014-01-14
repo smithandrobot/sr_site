@@ -1,3 +1,10 @@
+textarea,
+input {
+	font-family: Helvetica, arial, sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -7,7 +14,6 @@ textarea {
 
 	border: none;
 	background: #EEE;
-	font-size: 1em;
 	color: #999;
 }
 

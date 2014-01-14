@@ -1,4 +1,11 @@
 .owl-carousel .owl-wrapper-outer { overflow: visible; }
+
+.carousel-slide {
+	background: #eee;
+	overflow: hidden;
+	border-radius: 2px;
+}
+
 .owl-item {
 	position: relative;
 	left: -1em;
@@ -6,7 +13,11 @@
 	&.active { left: 0; }
 	&.active + .owl-item { left: 1em; }
 
-	img { display: block; }
+	img {
+		display: block;
+		border-radius: 3px;
+		overflow: hidden;
+	}
 }
 
 .owl-theme .owl-controls .owl-buttons div {
@@ -19,7 +30,7 @@
 
 	font-size: 1em;
 	color: transparent;
-	background: transparent;
+	background: url(../images/transparent.gif);
 
 	&.disabled { display: none; }
 }
