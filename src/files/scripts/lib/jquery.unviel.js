@@ -38,7 +38,9 @@
             et = $e.offset().top,
             eb = et + $e.height();
 
-        return eb >= wt - th && et <= wb + th;
+        return  (eb >= wt - th && et <= wb + th) || // entirely contained
+                (et >= wt - th) || // top contained
+                (eb <= wb + th); // bottom contained
       });
 
       loaded = inview.trigger("unveil");
