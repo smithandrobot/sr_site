@@ -5,6 +5,7 @@
 
 	<meta name="viewport" content="width=device-width">
 	<%- @getBlock('meta').toHTML(); %>
+	<style type="text/css">.sectionPanes .contentPane { display: none; }</style>
 	<%- @getBlock('styles').toHTML(); %>
 
 	<script src="http://use.typekit.net/unl8vyi.js"></script>
