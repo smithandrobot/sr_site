@@ -53,6 +53,8 @@
     }
 
     if (error) return;
+
+    $formError.fadeOut();
     
     $.getJSON(
       this.action + "?callback=?",
