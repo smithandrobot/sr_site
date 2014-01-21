@@ -19,7 +19,7 @@
     mapCenter: new google.maps.LatLng(30.35269,-97.7502),
     map: null,
     _loaded: false,
-    _markerURL: 'http://smithandrobot.com/assets/components/images/map_marker.png',
+    _markerURL: window.location.origin + '/images/map_marker.png',
 
     initialize: function() {
       if (SARMap._loaded) return;
