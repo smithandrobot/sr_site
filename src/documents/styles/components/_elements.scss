@@ -2,7 +2,12 @@ img {
 	max-width: 100%;
 	height: auto;
 
-	&.lazyLoad { background: url(../images/loader.gif) center center no-repeat; }
+	&.lazyLoad { 
+		background: url(../images/Bars.gif) center center;
+		background-size: 15px 15px;
+
+		&.isLoaded { background: none; }
+	}
 }
 
 p { margin: 1em 0; }

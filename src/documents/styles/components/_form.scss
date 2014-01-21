@@ -19,7 +19,7 @@ textarea {
 
 	&:invalid,
 	&.invalid {
-		border: 1px solid lighten(red, 30%);
+		border: 1px solid #ffd44a;
 	}
 }
 

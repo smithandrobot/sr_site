@@ -4,11 +4,14 @@
 }
 
 .alert.alert-success {
-	background: rgba(0,100,0, 0.2);
-	border: 1px solid rgba(0,100,0, 0.4);
+	background: #00b9d1;
+	border: none;
+	border-radius: 3px;
 }
 
 .alert.alert-error {
-	background: rgba(lighten(red, 30%), 0.2);
-	border: 1px solid lighten(red, 30%);
+	background: #ffd44a;
+	border: none;
+	border-radius: 3px;
+	color: #5c4500;
 }
