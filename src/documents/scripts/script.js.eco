@@ -15,6 +15,54 @@
 
 	$('img').unveil(200);
 
+  var $form = $('#contactForm'),
+    $formSuccess = $('#contactSuccess'),
+    $formError = $('#contactError'),
+    $nameField = $form.find('[name=cm-name]'),
+    $emailField = $form.find('[name=cm-jjhhou-jjhhou]'),
+    $commentField = $form.find('[name=cm-f-wshyr]');
+
+  $form.submit(function(e) {
+    var error = false;
+    e.preventDefault();
+
+    if ($nameField.val().length == 0) {
+      $nameField.addClass('invalid');
+      error = true;
+    } else {
+      $nameField.removeClass('invalid');
+    }
+
+    if (!/\S+@\S+\.\S+/.test($emailField.val())) { // basic validation, server is doing full
+      $emailField.addClass('invalid');
+      error = true;
+    } else { 
+      $emailField.removeClass('invalid');
+    }
+
+    if ($commentField.val().length == 0) {
+      $commentField.addClass('invalid');
+      error = true;
+    } else {
+      $commentField.removeClass('invalid');
+    }
+
+    if (error) return;
+    
+    $.getJSON(
+      this.action + "?callback=?",
+      $(this).serialize(),
+      function(data) {
+        if (data.Status == 400) {
+          $formError.text(data.Message);
+          $formError.fadeIn();
+        } else {
+          $formSuccess.fadeIn();
+          $form.fadeOut();
+        }
+      });
+  });
+
   window.SARMap = {
     mapCenter: new google.maps.LatLng(30.35269,-97.7502),
     map: null,

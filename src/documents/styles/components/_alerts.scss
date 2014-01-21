@@ -1,0 +1,14 @@
+.alert {
+	padding: 1em;
+	margin: 0 0 1em;
+}
+
+.alert.alert-success {
+	background: rgba(0,100,0, 0.2);
+	border: 1px solid rgba(0,100,0, 0.4);
+}
+
+.alert.alert-error {
+	background: rgba(lighten(red, 30%), 0.2);
+	border: 1px solid lighten(red, 30%);
+}

@@ -6,20 +6,28 @@ order: 2
 
 <div class="grid">
 	<div class="grid-cell-1-1 grid-cell-1-2-medium">
-		<form>
-			<p>
-				<label for="emailField" class="visuallyHidden">Your Email Address</label>
-				<input type="email" placeholder="Your Email Address" name="email" id="emailField" class="blockElement" />
-			</p>
-
-			<p>
-				<label for="messageField" class="visuallyHidden">Your Message</label>
-				<textarea name="message" id="messageField" placeholder="Your Message" class="blockElement" ></textarea>
-			</p>
-
-			<p>
-				<input type="submit" value="Send Message" class="btn btnSkinPrimary blockElement" />
-			</p>
+		<div class="hidde alert alert-success" id="contactSuccess">
+			This is a success message.
+		</div>
+		<div class="hidde alert alert-error" id="contactError">
+			This is an error message.
+		</div>
+		<form action="http://subscribers.smithandrobot.com/t/r/s/jjhhou/" method="post" id="contactForm">
+    		<p>
+        		<label for="fieldName" class="visuallyHidden">Name</label>
+        		<input id="fieldName" name="cm-name" type="text" placeholder="Your Name" class="blockElement" />
+    		</p>
+    		<p>
+        		<label for="fieldEmail" class="visuallyHidden">Email</label>
+        		<input id="fieldEmail" name="cm-jjhhou-jjhhou" type="email" placeholder="Your Email Address" required class="blockElement" />
+    		</p>
+    		<p>
+        		<label for="fieldwshyr" class="visuallyHidden">Comments</label>
+        		<textarea id="fieldwshyr" name="cm-f-wshyr" type="text" placeholder="Your Message" class="blockElement"></textarea>
+    		</p>
+    		<p>
+        		<button type="submit" class="btn btnSkinPrimary blockElement">Send Message</button>
+    		</p>
 		</form>
 	</div>
 	<div class="grid-cell-1-1 grid-cell-1-2-medium">

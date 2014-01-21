@@ -1,5 +1,6 @@
 textarea,
-input {
+input,
+button {
 	font-family: Helvetica, arial, sans-serif;
 	font-weight: 300;
 	font-size: 1em;
@@ -15,6 +16,11 @@ textarea {
 	border: none;
 	background: #EEE;
 	color: #999;
+
+	&:invalid,
+	&.invalid {
+		border: 1px solid lighten(red, 30%);
+	}
 }
 
 textarea { min-height: 15em; }
