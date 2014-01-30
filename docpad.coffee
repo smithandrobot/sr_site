@@ -14,6 +14,10 @@ docpadConfig = {
 			"<img src=\"/images/transparent.gif\" data-src=\"#{url}\" width=\"#{width}\" height=\"#{height}\" class=\"lazyLoad\" />"
 
 	plugins:
+		sass:
+			scssPath: ['bundle', 'exec', 'scss']
+			sassPath: ['bundle', 'exec', 'sass']
+			compass: false
 		opengraph:
 			defaults:
 				scripts: [
