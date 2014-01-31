@@ -17,8 +17,8 @@ a {
 	color: $urgent;
 	text-decoration: none;
 }
-a:visited { color: lighten($urgent, 20%); }
-a:hover { text-decoration: underline; }
+a:visited { color: $urgent; }
+a:hover { text-decoration: underline; color: darken($urgent, 20%);  }
 
 .hr {
 	width: 100%;
