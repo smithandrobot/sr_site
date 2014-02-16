@@ -1,5 +1,5 @@
 body {
-	font-family: helvetica, arial, sans-serif;
+	font-family: sans-serif;
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 1.5;
@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6,
 	small {
 		display: block;
 		font-size: 0.5em;
-		font-family: helvetica, arial, sans-serif;
+		font-family: sans-serif;
 		font-weight: 300;
 		line-height: 1.5em;
 
@@ -47,9 +47,9 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-	font-size: 2.3em;
+	font-size: 1.5em;
 	line-height: 1em;
 	margin: 0 0 0.43em;
 
-	small { font-size: 0.434782609em; }
+	small { font-size: 16px; }
 }

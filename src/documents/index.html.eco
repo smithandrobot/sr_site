@@ -7,12 +7,31 @@ redirects: home.html
 	<div class="grid">
 		<div class="grid-cell-10-12 grid-push-1-12">
 			<div class="hr"></div>
-
-			<%- @insertCarousel('portfolio') %>
 			<br/><!-- todo: remove -->
-			<%- @insertCarousel('portfolio2') %>
-			<br/>
-			<%- @insertCarousel('highres') %>
-		</div>
+			<%- @insertCarousel('tw-main') %>
+			<br/><!-- todo: remove -->
+			<%- @insertCarousel('ni-k12lab') %>
+			<br/><!-- todo: remove -->
+			<%- @insertCarousel('healthtronics') %>
+			<br/><!-- todo: remove -->
+			<%- @insertCarousel('tw-studios') %>
+			<br/><!-- todo: remove -->
+			<%- @insertCarousel('ni-poweredby') %>
+			<br/><!-- todo: remove -->
+			<%- @insertCarousel('pulsepoint') %>
+			<br/><!-- todo: remove -->
+			<%- @insertCarousel('tw-snap') %>
+			<br/><!-- todo: remove -->
+			<%- @insertCarousel('ruwt') %>
+			<br/><!-- todo: remove -->
+			<%- @insertCarousel('tneil') %>
+			<br/><!-- todo: remove -->
+			<%- @insertCarousel('twitter') %>
+			<br/><!-- todo: remove -->
+			<%- @insertCarousel('breedlove') %>
+			<br/><!-- todo: remove -->
+			<%- @insertCarousel('cxc') %>
+			<br/><!-- todo: remove -->
+			<%- @insertCarousel('bazaarvoice') %>		</div>
 	</div>
 </article>

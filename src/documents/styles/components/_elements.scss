@@ -13,6 +13,17 @@ img {
 p { margin: 1em 0; }
 p:first-child { margin-top: 0; }
 
+.contentPane ul, .contentPane ol {
+	margin: 1em 0;
+}
+
+.contentPane li {
+	padding: .25em 0;
+	border-top: 1px solid #cccccc;
+
+	&:first-child {border-top: none;}
+}
+
 a {
 	color: $urgent;
 	text-decoration: none;
