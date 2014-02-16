@@ -22,16 +22,19 @@
 }
 
 .owl-theme .owl-controls .owl-buttons div {
+	transition: opacity .5s;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	width: 1/12 *100%;
 	margin: 0;
 	padding: 0;
-
 	font-size: 1em;
 	color: transparent;
-	background: url(../images/transparent.gif);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: transparent;
 
 	&.disabled { display: none; }
 }
@@ -39,8 +42,10 @@
 .owl-theme .owl-controls .owl-buttons .owl-next {
 	left: 100%;
 	margin-left: 1em;
+	background-image: url(../images/icons/next.png);
 }
 .owl-theme .owl-controls .owl-buttons .owl-prev { 
 	right: 100%;
 	margin-right: 1em;
+	background-image: url(../images/icons/back.png);
 }
