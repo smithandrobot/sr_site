@@ -1,6 +1,17 @@
 <div class="carousel-slide" data-title="<%= @document.title %>">
 	<div class="carsousel-slide-image">
-		<%- @lazyImg(@document.image, @document.width, @document.height) %>
+		<span data-picture>
+			<span data-src="<%= @getThumbnail(@document.image, { w: 270,  h: 152 }) %>"></span>
+			<span data-src="<%= @getThumbnail(@document.image, { w: 540,  h: 304 }) %>" data-media="(-webkit-min-device-pixel-ratio: 2.0)"></span>
+			<span data-src="<%= @getThumbnail(@document.image, { w: 650, h: 365 }) %>"	data-media="(min-width: 768px)"></span>
+			<span data-src="<%= @getThumbnail(@document.image, { w: 1300, h: 731 }) %>"	data-media="(min-width: 768px) and (-webkit-min-device-pixel-ratio: 2.0)"></span>
+			<span data-src="<%= @getThumbnail(@document.image, { w: 1140, h: 641 }) %>" data-media="(min-width: 1025px)"></span>
+			<span data-src="<%= @getThumbnail(@document.image, { w: 2280, h: 1282 }) %>" data-media="(min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2.0)"></span>
+
+			<noscript>
+				<img src="<%= @getThumbnail(@document.image, { w: 540,  h: 304 }) %>" width="540" hieght="304" />
+			</noscript>
+		</span>
 	</div>
 
 	<div class="carousel-slide-caption">
