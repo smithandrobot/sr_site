@@ -11,16 +11,19 @@
 			$active = null;
 		} else if ($active) {
 			$($active.data('target')).slideUp(function() {
-				$($clicked.data('target')).slideDown();
+				$($clicked.data('target')).slideDown(function() {
+					SARMap.resize();
+					SARMap.center();
+				});
 				$active = $clicked;
 			});
 		} else {
-			$($clicked.data('target')).slideDown();
+			$($clicked.data('target')).slideDown(function() {
+				SARMap.resize();
+				SARMap.center();
+			});
 			$active = $clicked;
 		}
-
-		SARMap.resize();
-		SARMap.center();
 	});
 
 	$closers.click(function() {
