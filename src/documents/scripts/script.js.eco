@@ -13,12 +13,54 @@
 		singleItem: true
 	});
 
-	$('img').unveil(200, function(e) {
-    var $this = $(this);
-    $this.on('load', function() {
-      $this.addClass('isLoaded');
+  // carousel dynamic loader
+  var slideSizer = function() {
+    $('.carsousel-slide-image').each(function() {
+      var $this = $(this),
+        width = $this.width(),
+        fullWidth = $(this).data('width'),
+        fullHeight = $(this).data('height'),
+        ratio = width/fullWidth;
+
+      $this.height(Math.round(fullHeight * ratio));
     });
-  });
+  };
+  slideSizer();
+  $(window).resize(slideSizer); // add debouncing
+
+  var slideCheck = function() {
+    var windowTop = window.scrollY,
+      windowHeight = $(window).height(),
+      windowBottom = windowTop + windowHeight,
+      $images = $('.carousel img'),
+      $loadedImages = $images.filter('[src]'),
+      $unloadedImages = $images.filter(':not([src])');
+    
+    $loadedImages.each(function() {
+      var $this = $(this),
+          top = $this.offset().top,
+          bottom = top + $this.height();
+
+      if (bottom < windowTop || top > windowBottom) {
+        $this.attr('src', null);
+      }
+    });
+
+    $unloadedImages.each(function() {
+      var $this = $(this),
+          top = $this.offset().top,
+          bottom = top + $this.parents('.carousel-slide').height(); // img height is 0
+
+      if ((top > windowTop && bottom < windowBottom) ||
+        (top > windowTop && top < windowBottom) ||
+        (bottom > windowTop && bottom < windowBottom)) {
+        $this.attr('src', $this.attr('data-src'));
+      }
+    });
+  }
+  slideCheck();
+  $(window).on('load', slideCheck);
+  $(window).scroll(slideCheck); // add debouncing
  
   var $form = $('#contactForm'),
     $formSuccess = $('#contactSuccess'),
