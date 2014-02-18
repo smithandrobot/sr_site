@@ -25,34 +25,39 @@
     $formError = $('#contactError'),
     $nameField = $form.find('[name=cm-name]'),
     $emailField = $form.find('[name=cm-jjhhou-jjhhou]'),
-    $commentField = $form.find('[name=cm-f-wshyr]');
+    $commentField = $form.find('[name=cm-f-wshyr]'),
+    hasValidationErrors = function() {
+      var error = false;
+
+      if ($nameField.val().length == 0) {
+        $nameField.addClass('invalid');
+        error = true;
+      } else {
+        $nameField.removeClass('invalid');
+      }
+
+      if (!/\S+@\S+\.\S+/.test($emailField.val())) { // basic validation, server is doing full
+        $emailField.addClass('invalid');
+        error = true;
+      } else { 
+        $emailField.removeClass('invalid');
+      }
+
+      if ($commentField.val().length == 0) {
+        $commentField.addClass('invalid');
+        error = true;
+      } else {
+        $commentField.removeClass('invalid');
+      }
+      return error;
+    };
+
+  $('[name=cm-name],[name=cm-jjhhou-jjhhou],[name=cm-f-wshyr]').blur(hasValidationErrors);
 
   $form.submit(function(e) {
-    var error = false;
     e.preventDefault();
 
-    if ($nameField.val().length == 0) {
-      $nameField.addClass('invalid');
-      error = true;
-    } else {
-      $nameField.removeClass('invalid');
-    }
-
-    if (!/\S+@\S+\.\S+/.test($emailField.val())) { // basic validation, server is doing full
-      $emailField.addClass('invalid');
-      error = true;
-    } else { 
-      $emailField.removeClass('invalid');
-    }
-
-    if ($commentField.val().length == 0) {
-      $commentField.addClass('invalid');
-      error = true;
-    } else {
-      $commentField.removeClass('invalid');
-    }
-
-    if (error) return;
+    if (hasValidationErrors()) return;
 
     $formError.fadeOut();
     
