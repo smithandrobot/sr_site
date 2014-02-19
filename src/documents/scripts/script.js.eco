@@ -29,7 +29,8 @@
   $(window).resize(slideSizer); // add debouncing
 
   var slideCheck = function() {
-    var windowTop = window.scrollY,
+    var offset = 250,
+      windowTop = window.scrollY,
       windowHeight = $(window).height(),
       windowBottom = windowTop + windowHeight,
       $images = $('.carousel img'),
@@ -41,7 +42,7 @@
           top = $this.offset().top,
           bottom = top + $this.height();
 
-      if (bottom < windowTop || top > windowBottom) {
+      if (bottom < windowTop - offset || top > windowBottom + offset) {
         $this.attr('src', null);
       }
     });
@@ -51,9 +52,9 @@
           top = $this.offset().top,
           bottom = top + $this.parents('.carousel-slide').height(); // img height is 0
 
-      if ((top > windowTop && bottom < windowBottom) ||
-        (top > windowTop && top < windowBottom) ||
-        (bottom > windowTop && bottom < windowBottom)) {
+      if ((top > windowTop - offset && bottom < windowBottom + offset) ||
+        (top > windowTop - offset && top < windowBottom + offset) ||
+        (bottom > windowTop - offset && bottom < windowBottom + offset)) {
         $this.attr('src', $this.attr('data-src'));
       }
     });
