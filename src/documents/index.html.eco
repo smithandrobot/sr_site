@@ -1,6 +1,46 @@
 ---
 layout: default
-redirects: home.html
+redirects:
+	- about/index.html
+	- work/index.html
+	- contact/index.html
+	- blog/index.html
+	- work/healthtronics.html
+	- blog/embracing-uncertainty-responsive-presentation.html
+	- about/index.html
+	- blog.rss
+	- work/national-instrument.html
+	- work/oscars-twitter.html
+	- work/clearxchange.html
+	- work/index.html
+	- work/world-market.html
+	- work/jock-box.html
+	- work/bazaarvoice.html
+	- work/reebok-holiday.html
+	- work/becomeanex.html
+	- work/verizon-twitter.html
+	- work/breedlove.html
+	- work/we-are-teachers.html
+	- work/absolute.html
+	- blog/how-we-got-ourname.html
+	- blog/a-message-to-myself-in-2009.html
+	- blog/taking-a-shot-versus-taking-responsibility.html
+	- blog/touch-screens-and-our-curation-culture.html
+	- blog/its-time-for-some-dude-to-get-fired.html
+	- blog/the-power-of-expectations-usps.html
+	- blog/5-predictions-for-digital-marketing-in-2012.html
+	- blog/what-good-is-a-time-sheet.html
+	- blog/can-a-brand-survive-on-marketing-alone.html
+	- blog/the-case-for-more-veterans-in-marketing.html
+	- blog/the-trouble-with-procurement-cultures.html
+	- blog/what-price-an-ipod-cable.html
+	- blog/is-your-logo-antisocial.html
+	- no-bad-banners.html
+	- inbox-insanity.html
+	- ie6-is-dumb.html
+	- seo-is-built-in.html
+	- 9.html
+
 ---
 
 <article class="contentPane">

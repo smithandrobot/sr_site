@@ -10,7 +10,8 @@ module.exports = (BasePlugin) ->
 				"""
 				<!DOCTYPE html>
 				<head>
-					<title>Redirecting to #{document.get('title')}</title>
+					<title>Redirecting</title>
+					<link rel="canonical" href="#{document.get('url')}" />
 					<meta http-equiv='refresh' content='0;url=#{document.get('url')}' />
 				</head>
 				<body>
