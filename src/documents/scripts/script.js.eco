@@ -43,10 +43,10 @@ function debounce(func, wait, immediate) {
   $(window).resize(debounce(slideSizer, 250)); // add debouncing
 
   var slideCheck = function() {
-    var offset = 250,
-      windowTop = window.scrollY,
+    var windowTop = window.scrollY,
       windowHeight = $(window).height(),
       windowBottom = windowTop + windowHeight,
+      offset = windowHeight*1.3,
       $images = $('.carousel img'),
       $loadedImages = $images.filter('[src]'),
       $unloadedImages = $images.filter(':not([src])');

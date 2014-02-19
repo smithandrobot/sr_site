@@ -35,6 +35,10 @@ docpadConfig = {
 				]
 		thumbnails:
 			imageMagick: true
+			targets:
+				default: (img, args) ->
+					return img.quality(args.q).resize(args.w, args.h).interlace('Line')
+				
 
 	collections:
 		panels: ->
