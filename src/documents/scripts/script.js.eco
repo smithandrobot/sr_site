@@ -1,3 +1,17 @@
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function() {
+    var context = this, args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    }, wait);
+    if (immediate && !timeout) func.apply(context, args);
+  };
+};
+
+
 (function($) {
 	$('html')
 		.removeClass('no-js')
@@ -26,7 +40,7 @@
     });
   };
   slideSizer();
-  $(window).resize(slideSizer); // add debouncing
+  $(window).resize(debounce(slideSizer, 250)); // add debouncing
 
   var slideCheck = function() {
     var offset = 250,
@@ -61,7 +75,8 @@
   }
   slideCheck();
   $(window).on('load', slideCheck);
-  $(window).scroll(slideCheck); // add debouncing
+
+  $(window).scroll(debounce(slideCheck, 250));
  
   var $form = $('#contactForm'),
     $formSuccess = $('#contactSuccess'),
