@@ -3,7 +3,7 @@
 <head class="no-js">
 	<title>Smith &amp; Robot - A Creative Technology Agency</title>
 
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 	<meta property="og:site_name" content="Smith & Robot" />
