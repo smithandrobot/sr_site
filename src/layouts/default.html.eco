@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-	<meta property="og:site_name" content="Smith & Robot" />
+	<meta property="og:site_name" content="Smith &amp; Robot" />
 	<meta name="description" content="A creative technology agency wired to partner with marketers." />
 	<meta property="og:description" content="A creative technology agency wired to partner with marketers." />
 	<meta property="og:image" content="http://smithandrobot.com/images/logo.png" />
