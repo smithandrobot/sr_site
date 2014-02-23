@@ -5,4 +5,5 @@ slides:
     - cxc-phone
     - cxc-desktop
     - cxc-detail
+hash: cxc
 ---

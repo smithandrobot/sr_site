@@ -5,4 +5,5 @@ slides:
     - twitter-home
     - twitter-desktop
     - twitter-detail
+hash: verizon-twitter
 ---

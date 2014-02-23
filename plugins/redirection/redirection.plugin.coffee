@@ -6,19 +6,17 @@ module.exports = (BasePlugin) ->
 		name: 'redirection'
 
 		config:
-			getRedirectTemplate: (document) ->
-				"""
-				<!DOCTYPE html>
-				<head>
-					<title>Redirecting</title>
-					<link rel="canonical" href="#{document.get('url')}" />
-					<meta http-equiv='refresh' content='0;url=#{document.get('url')}' />
-				</head>
-				<body>
-					&nbsp;
-				</body>
-				</html>
-				"""
+			getRedirectTemplate: (to) ->
+				'<!DOCTYPE html>'+
+				'<head>'+
+				'	<title>Redirecting</title>'+
+				'	<link rel="canonical" href="'+to+'" />'+
+				'	<meta http-equiv=\'refresh\' content=\'0;url='+to+'\'/>'+
+				'</head>'+
+				'<body>'+
+				'	<p>Click <a href="'+to+'">here</a> if you are not redirected.</p>'+
+				'</body>'+
+				'</html>'
 
 		writeAfter: (opts, next) ->
 			{collection, templateData} = opts
@@ -34,11 +32,11 @@ module.exports = (BasePlugin) ->
 				console.log("\ndone writing redirects")
 				return next(err)
 
-			addWriteTask = (url, model) ->
+			addWriteTask = (from, to) ->
 				writeTasks.addTask (complete) -> 
-					path = getCleanOutPathFromUrl(url)
+					path = getCleanOutPathFromUrl(from)
 					dirname = pathUtil.dirname(path)
-					content = config.getRedirectTemplate(model)
+					content = config.getRedirectTemplate(to)
 					mkdirp dirname, (err) ->
 						complete(err) if err
 						
@@ -51,10 +49,10 @@ module.exports = (BasePlugin) ->
 
 			collection.each (model, cbEach) ->
 				redirects = []
-				redirects = redirects.concat model.get('redirects') if model.get('redirects')
+				redirects = model.get('redirects') if model.get('redirects')
 
-				for url in redirects
-					addWriteTask(url, model)
+				for redirect in redirects
+					addWriteTask(redirect.url, redirect.redirect)
 
 			writeTasks.run()
 			console.log(writeTasks.getTotals())

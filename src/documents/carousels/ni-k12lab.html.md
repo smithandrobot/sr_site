@@ -7,4 +7,5 @@ slides:
     - ni-k12lab-ipad
     - ni-k12lab-print
     - ni-k12lab-branding
+hash: national-instruments
 ---

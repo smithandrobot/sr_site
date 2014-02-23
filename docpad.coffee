@@ -25,14 +25,14 @@ docpadConfig = {
 					'//maps.google.com/maps/api/js?sensor=false',
 					'/scripts/lib/picturefill.js',
 					'/scripts/owl.carousel.js',
-					'/scripts/toggle.js'
-					'/scripts/script.js',
+					'/scripts/toggle.js',
+					'/scripts/script.js'
 				]
 				styles: [
 					'/styles/owl.carousel.css',
 					'/styles/owl.theme.css',
 					'/styles/styles.css',
-				]
+				]	
 		thumbnails:
 			imageMagick: true
 			targets:

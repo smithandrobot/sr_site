@@ -7,8 +7,7 @@ module.exports = (BasePlugin) ->
         name: 'opengraph'
 
         config:
-            defaults:
-                foo: '1234'
+            defaults: {}
 
         writeBefore: (opts) ->
             docPad = @docPad

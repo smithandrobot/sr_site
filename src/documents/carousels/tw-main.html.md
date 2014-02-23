@@ -6,4 +6,5 @@ slides:
     - tw-main-phone-2
     - tw-main-phone
     - tw-main-twitter
+hash: thoughtworks
 ---

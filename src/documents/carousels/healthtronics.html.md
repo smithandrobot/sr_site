@@ -5,4 +5,5 @@ slides:
     - healthtronics-phone
     - healthtronics-desktop
     - healthtronics-ipad
+hash: healthtronics
 ---

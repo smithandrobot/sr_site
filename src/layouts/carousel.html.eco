@@ -1,4 +1,4 @@
-<h2 class="h1">
+<h2 class="h1" <% if @document.hash: %> id="<%= @document.hash %>" <% end %> >
 	<%= @document.title %>
 	<% if @document.subtitle: %>
 		<small><%= @document.subtitle %></small>
