@@ -40,7 +40,19 @@ function debounce(func, wait, immediate) {
     });
   };
   slideSizer();
+  openPanel();
   $(window).resize(debounce(slideSizer, 250)); // add debouncing
+
+  /*
+   * Exapand Panels on page load if 'About' or 'Contact'
+   * hashes are present
+  */
+  function openPanel() {
+    var hash = location.hash.replace('#', '');
+    if(hash === 'about' || hash === 'contact') {
+      $('[data-link='+hash+']').click();
+    }
+  }
 
   var slideCheck = function() {
     var windowTop = window.scrollY,

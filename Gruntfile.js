@@ -33,7 +33,7 @@ module.exports = function(grunt) {
                         },
                         {
                           match: '/<\/body>/',
-                          replacement: '<script src="/scripts/production.js"></script></body>',
+                          replacement: '<script async="true" src="/scripts/production.js"></script></body>',
                           expression: true
                         },
                     ]
@@ -104,7 +104,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.registerTask('default', []);
-    grunt.registerTask('build', ['concat:build', 'uglify:build', 'replace:buildjs', 'replace:buildcss','cssmin', 'htmlmin']);
+    //grunt.registerTask('default', []);
+    grunt.registerTask('default', ['concat:build', 'uglify:build', 'replace:buildjs', 'replace:buildcss','cssmin', 'htmlmin']);
 
 }

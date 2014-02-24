@@ -4,7 +4,7 @@
 # Define the DocPad Configuration
 docpadConfig = {
 	renderPasses: 2 # needed for carousel includes
-
+	databaseCache: false
 	templateData:
 		insertCarousel: (name) ->
 			@getCollection('carousels').findOne({basename: name}).getOutContent()

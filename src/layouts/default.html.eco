@@ -31,7 +31,7 @@
 					<nav>
 						<ul id="SectionMenu" class="menu menu--horizontal menuSkin--sections">
 							<% for panel in @getCollection('panels').toJSON(): %>
-								<li class="menu-item" data-target="#<%= panel.id %>">
+								<li data-link="<%= panel.hash %>" class="menu-item" data-target="#<%= panel.id %>">
 									<span><%= panel.menuTitle %></span>
 								</li>	
 							<% end %>
