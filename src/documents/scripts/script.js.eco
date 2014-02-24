@@ -11,6 +11,9 @@ function debounce(func, wait, immediate) {
   };
 };
 
+function pauseVideo(iframe) {
+  iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+}
 
 (function($) {
 	$('html')
@@ -24,8 +27,18 @@ function debounce(func, wait, immediate) {
 		navigation: true,
 		pagination: false,
 		rewindNav: false,
-		singleItem: true
+		singleItem: true,
+    beforeMove: function($element) {
+      var $item = this.$owlItems.eq(this.prevItem),
+        $iframe = $item.find('.carousel-slide-video iframe');
+
+      if ($iframe.length > 0) {
+        pauseVideo($iframe[0]);
+      }
+    }
 	});
+
+  $('body').fitVids();
 
   // carousel dynamic loader
   var slideSizer = function() {
