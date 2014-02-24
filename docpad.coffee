@@ -38,8 +38,14 @@ docpadConfig = {
 			targets:
 				default: (img, args) ->
 					return img.quality(args.q).resize(args.w, args.h).interlace('Line')
-				
+		# grunt:
+		# 	writeBefore: -> add 'build' if not in dev environment, added dynamically in docpadLoaded event
 
+	events:
+		docpadLoaded: ->
+			if (docpad.getEnvironment() != 'development')
+				docpad.getConfig().plugins.grunt.writeAfter.push('build')
+			
 	collections:
 		panels: ->
 			@getCollection('database').findAllLive({relativeDirPath: 'panels'}, [order: 1]).on 'add', (model) ->
