@@ -38,13 +38,13 @@ docpadConfig = {
 			targets:
 				default: (img, args) ->
 					return img.quality(args.q).resize(args.w, args.h).interlace('Line')
-		# grunt:
-		# 	writeBefore: -> add 'build' if not in dev environment, added dynamically in docpadLoaded event
+		grunt:
+			writeAfter: false # do nothing
 
 	events:
 		docpadLoaded: ->
 			if (docpad.getEnvironment() != 'development')
-				docpad.getConfig().plugins.grunt.writeAfter.push('build')
+				docpad.getConfig().plugins.grunt.writeAfter = [] # default task
 			
 	collections:
 		panels: ->
