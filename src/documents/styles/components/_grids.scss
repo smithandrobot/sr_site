@@ -22,6 +22,9 @@ $grid-columns:		12;
 .grid {
 	@include clearfix;
 	margin-left: -$grid-padding;
+	&.stack {
+		margin-top: 40px;
+	}
 }
 
 [class*='grid-cell-'] {
@@ -34,6 +37,9 @@ $grid-columns:		12;
 	position: relative;
 }
 
+.push-vertical-30 {
+	margin-top: 30px;
+}
 @for $large from 1 through $grid-columns {
 	@for $small from 1 through $large {
 		@include gridCell($small, $large);
@@ -45,5 +51,13 @@ $grid-columns:		12;
 		@for $small from 1 through $large {
 			@include gridCell($small, $large, "medium");
 		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.mobile {
+		width:82.9%;
+		left:0;
+		margin-left: 8.53%;
 	}
 }

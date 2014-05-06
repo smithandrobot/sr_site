@@ -1,4 +1,4 @@
-(function() {
+;(function() {
 	$toggles = $('.menu-item[data-target]'),
 	$closers = $('.contentPane-closeButton');
 	$active = null;

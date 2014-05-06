@@ -1,4 +1,4 @@
-function debounce(func, wait, immediate) {
+;function debounce(func, wait, immediate) {
   var timeout;
   return function() {
     var context = this, args = arguments;
@@ -15,7 +15,7 @@ function pauseVideo(iframe) {
   iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
 }
 
-(function($) {
+;(function($) {
 	$('html')
 		.removeClass('no-js')
 		.addClass('js');
@@ -102,13 +102,17 @@ function pauseVideo(iframe) {
   $(window).on('load', slideCheck);
 
   $(window).scroll(debounce(slideCheck, 250));
- 
-  var $form = $('#contactForm'),
-    $formSuccess = $('#contactSuccess'),
-    $formError = $('#contactError'),
-    $nameField = $form.find('[name=cm-name]'),
-    $emailField = $form.find('[name=cm-jjhhou-jjhhou]'),
-    $commentField = $form.find('[name=cm-f-wshyr]'),
+  
+  function forms(selector, successSelector, errorSelector) {
+    var $form = $(selector),
+        $formSuccess = $(successSelector),
+        $formError = $(errorSelector),
+        $nameField = $form.find('[name=cm-name]'),
+        $emailField = $form.find('[name=cm-jjhhou-jjhhou]'),
+        $commentField = $form.find('[name=cm-f-wshyr]'),
+        $sourceField = $form.find('[name=cm-f-jdkjhld]')
+
+
     hasValidationErrors = function() {
       var error = false;
 
@@ -134,29 +138,33 @@ function pauseVideo(iframe) {
       }
       return error;
     };
-
-  $('[name=cm-name],[name=cm-jjhhou-jjhhou],[name=cm-f-wshyr]').blur(hasValidationErrors);
-
-  $form.submit(function(e) {
-    e.preventDefault();
-
-    if (hasValidationErrors()) return;
-
-    $formError.fadeOut();
-    
-    $.getJSON(
-      this.action + "?callback=?",
-      $(this).serialize(),
-      function(data) {
-        if (data.Status == 400) {
-          $formError.text(data.Message);
-          $formError.fadeIn();
-        } else {
-          $formSuccess.fadeIn();
-          $form.fadeOut();
-        }
-      });
-  });
+  
+    $($form.find('[name=cm-name],[name=cm-jjhhou-jjhhou],[name=cm-f-wshyr]')).blur(hasValidationErrors);
+  
+    $form.submit(function(e) {
+      e.preventDefault();
+  
+      if (hasValidationErrors()) return;
+  
+      $formError.fadeOut();
+      
+      $.getJSON(
+        this.action + "?callback=?",
+        $(this).serialize(),
+        function(data) {
+          if (data.Status == 400) {
+            $formError.text(data.Message);
+            $formError.fadeIn();
+          } else {
+            $formSuccess.fadeIn();
+            $form.fadeOut();
+          }
+        });
+    });
+  }
+  
+  forms('#contactForm', '#contactSuccess', '#contactError');
+  forms('#contactFormMarketo', '#contactSuccessMarketo', '#contactErrorMarketo');
 
   window.SARMap = {
     mapCenter: new google.maps.LatLng(30.35269,-97.7502),

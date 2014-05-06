@@ -7,6 +7,7 @@ module.exports = function(grunt) {
             build: {
                 src: [
                     'out/scripts/lib/picturefill.js',
+                    'out/scripts/lib/jquery.fitvid.js',
                     'out/scripts/owl.carousel.js',
                     'out/scripts/toggle.js',
                     'out/scripts/script.js',
@@ -33,7 +34,7 @@ module.exports = function(grunt) {
                         },
                         {
                           match: '/<\/body>/',
-                          replacement: '<script async="true" src="/scripts/production.js"></script></body>',
+                          replacement: '<script src="/scripts/production.js"></script></body>',
                           expression: true
                         },
                     ]
@@ -68,7 +69,8 @@ module.exports = function(grunt) {
                   collapseWhitespace: true
                 },
                 files: {
-                  'out/index.html': 'out/index.html'
+                  'out/index.html': 'out/index.html',
+                  'out/marketo/index.html': 'out/marketo/index.html'
                 }
             },
         },
@@ -105,6 +107,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     //grunt.registerTask('default', []);
-    grunt.registerTask('default', ['concat:build', 'uglify:build', 'replace:buildjs', 'replace:buildcss','cssmin', 'htmlmin']);
+    grunt.registerTask('default', [
+        'concat:build', 
+        'uglify:build',
+        'replace:buildjs', 
+        'replace:buildcss',
+        'cssmin', 
+        'htmlmin']);
 
 }

@@ -14,8 +14,8 @@ if ( typeof Object.create !== "function" ) {
 		F.prototype = obj;
 		return new F();
 	};
-}
-(function( $, window, document, undefined ) {
+};
+;(function( $, window, document, undefined ) {
 
 	var Carousel = {
 		init :function(options, el){

@@ -1,0 +1,41 @@
+#article {
+	ul, ol {
+		list-style-position:inside;
+	}
+
+	ul{
+		list-style-type: initial;
+	}
+
+	ol{
+		list-style-type: decimal;
+	}
+
+	strong {
+		font-weight:600;
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	blockquote {
+		color: #999;
+		padding-left: 1em;
+		border-left: 2px solid $urgent;
+	}
+
+	hr {
+		border-top: 1px #ccc solid;
+		border-bottom: none;
+		border-left: none;
+		width: 100%;
+		margin: 2em 0;
+	}
+
+	h2 {
+		font-size: 1.5em;
+		line-height: 1em;
+		margin: 0 0 0.43em;
+	}
+}

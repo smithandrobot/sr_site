@@ -1,0 +1,44 @@
+.marketo-header {
+	.illustration{
+
+		background-image: url('/images/S&R-Marketo.png');
+		background-attachment: scroll;
+		background-size: 100%;
+		background-position: 50% 50%;
+		background-repeat: no-repeat no-repeat;
+		height: auto;
+		width: 100%;
+		padding: 5% 0;
+		.copy {
+			width: 48%;
+			margin-left: 25%;
+			border: 30px solid;
+			border-color: rgb(238, 55, 24) rgb(255, 81, 51) rgb(255, 81, 51) rgb(238, 55, 24);
+			background-color: #FFF;
+			padding: 5% 4%;
+			border-radius: 17px;
+			text-align: center;
+			background-image: url("/images/bg-device.png");
+			background-attachment: scroll;
+			background-size: auto;
+			background-position: 50% 50%;
+			background-repeat: no-repeat no-repeat;
+			p {
+				margin:0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.marketo-header {
+		.illustration{
+			background-image: none;
+			.copy {
+				margin-left: 8.53%;
+				width:82.9%;
+				border-width: 20px;
+			}
+		}
+	}
+}

@@ -29,3 +29,17 @@ textarea { min-height: 15em; }
 :-moz-placeholder { color: #ccc; }
 ::-moz-placeholder { color: #ccc; }
 :-ms-input-placeholder { color: #ccc; }
+
+#contactForm-marketo {
+	button {
+		background: $urgent;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#contactForm-marketo {
+		padding: 0 1.5em;
+		margin-left: .5em;
+		width: 100%;
+	}
+}

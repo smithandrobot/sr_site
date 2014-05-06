@@ -1,0 +1,183 @@
+---
+title: Marketo
+---
+<!DOCTYPE html>
+<html>
+<head class="no-js">
+	<title>Smith &amp; Robot - A Creative Technology Agency</title>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+	<meta property="og:site_name" content="Smith &amp; Robot" />
+	<meta name="description" content="A creative technology agency wired to partner with marketers." />
+	<meta property="og:description" content="A creative technology agency wired to partner with marketers." />
+	<meta property="og:image" content="http://smithandrobot.com/images/logo.png" />
+	<meta property="og:url" content="http://smithandrobot.com" />
+	<meta property="og:title" content="Digital First" />
+	<meta property="og:type" content="website" />
+	<%- @getBlock('meta').toHTML(); %>
+	<style type="text/css">.sectionPanes .contentPane { display: none; }</style>
+	<%- @getBlock('styles').toHTML(); %>
+
+	<script src="http://use.typekit.net/unl8vyi.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+	<div class="l-pageContainer">
+		<header role="banner" class="l-positionContext">
+			<div class="grid">
+				<div class="grid-cell-10-12 grid-push-1-12 text-center text-left-medium">
+					<a href="/"><img id="logo" src="/images/logo.png" width="125" /></a>
+
+					<nav>
+						<ul id="SectionMenu" class="menu menu--horizontal menuSkin--sections">
+							<% for panel in @getCollection('panels').toJSON(): %>
+								<li data-link="<%= panel.hash %>" class="menu-item" data-target="#<%= panel.id %>">
+									<span><%= panel.menuTitle %></span>
+								</li>	
+							<% end %>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<div class="sectionPanes">
+			<div class="grid">
+				<div class="grid-cell-10-12 grid-push-1-12">
+					<% for panel in @getCollection('panels').toJSON(): %>
+						<%- panel.contentRendered %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+		<div class="grid">
+			<div class="grid-cell-10-12 grid-push-1-12">
+				<div class="hr"></div>
+			</div>
+		</div>
+	</div>
+	<div class="marketo-header">
+		<h1 class="page-title text-center mobile">Get Mobile with Marketo</h1>
+		<p class="text-center page-subhead mobile">Love marketing automation and your mobile users too.</p>
+		<div class="illustration">
+			<div class="copy">
+				<p>
+					It's not easy being a Marketo-based enterprise that also values mobile. That's why Smith &amp; Robot created a special workflow to help marketers deliver their Marketo experience to every device. With our cocktail of consulting, best practice and custom Marketo Mobilized Template technology, you're organization will be publishing mobile-optimized landing pages and emails with ease.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="l-pageContainer">
+		<div class="grid">
+			<div class="grid-cell-12-12 text-center mobile">
+				<h1 class="large">How it works</h1>
+			</div>
+		</div>
+		<div class="grid stack">
+			<!-- Follow this -->
+			<div class="grid-cell-12-12 text-center mobile">
+				<h2 class="large">To the White Board!</h2>
+			</div>
+			<div class="grid-cell-2-12 text-center grid-push-2-12 mobile">
+				<img src="/images/how-it-works-1.png">
+			</div>
+			<div class="grid-cell-4-12 text-center grid-push-2-12 mobile">
+				<p>
+					Smith &amp; Robot is a full service creative agency, ready to work with your marketing team to design the brand experience your customers and prospects will love.
+				</p>
+			</div>
+		</div>
+		<div class="grid stack">
+			<div class="grid-cell-12-12 text-center mobile">
+				<h2 class="large">We Build Some Smart Templates</h2>
+			</div>
+			<div class="grid-cell-2-12 text-center grid-push-8-12 mobile">
+				<img src="/images/how-it-works-2.png">
+			</div>
+			<div class="grid-cell-4-12 text-center grid-push-2-12 mobile">
+				<p>
+					Using our Marketo Mobilizing technology platform, we create your mobile responsive templates based on the custom designs we created together.
+				</p>
+			</div>
+		</div>
+		<div class="grid stack">
+			<!-- Follow this -->
+			<div class="grid-cell-12-12 text-center mobile">
+				<h2 class="large">Create Your Content, Simply</h2>
+			</div>
+			<div class="grid-cell-2-12 text-center grid-push-2-12 mobile">
+				<img src="/images/how-it-works-3.png">
+			</div>
+			<div class="grid-cell-4-12 text-center grid-push-2-12 mobile">
+				<p>
+					Instead of drag and drop, your team will use our form-based platform just like in their favorite content management system—no design or coding skills required.
+				</p>
+			</div>
+		</div>
+		<div class="grid stack">
+			<div class="grid-cell-12-12 text-center mobile">
+				<h2 class="large">Deliver to Any Screen Automatically</h2>
+			</div>
+			<div class="grid-cell-2-12 text-center grid-push-8-12 mobile">
+				<img src="/images/how-it-works-4.png">
+			</div>
+			<div class="grid-cell-4-12 text-center grid-push-2-12 mobile">
+				<p>
+					As soon as you approve your assets, they're mobile. The Marketo Mobilized Templates do all the hard work so you can focus on great content.
+				</p>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="grid">
+			<div class="grid-cell-12-12 text-center mobile">
+				<h1 class="large">Let's Talk Mobile</h1>
+				<p class="marketo-subhead">Want to start publishing with Marketo Mobilized Templates.<br>Tell us how your organization works.</p>
+			</div>
+		</div>
+
+		<div class="grid">
+			<div class="grid-cell-6-12 grid-push-3-12 mobile">
+				<div class="hidden alert alert-success" id="contactSuccessMarketo">
+					Thanks for your message.
+				</div>
+				<div class="hidden alert alert-error" id="contactErrorMarketo">
+					This is an error message.
+				</div>
+			</div>
+		</div>
+
+		<div class="grid">
+			<form action="http://subscribers.smithandrobot.com/t/r/s/jjhhou/" method="post" id="contactFormMarketo" class="grid-cell-6-12 grid-push-3-12 mobile">
+    			<p>
+        			<label for="fieldName" class="visuallyHidden">Name</label>
+        			<input id="fieldName" name="cm-name" type="text" placeholder="Your Name" class="	blockElement">
+    			</p>
+    			<p>
+        			<label for="fieldEmail" class="visuallyHidden">Email</label>
+        			<input id="fieldEmail" name="cm-jjhhou-jjhhou" type="email" placeholder="Your Email Address" class="blockElement ">
+    			</p>
+    			<p>
+        			<label for="fieldwshyr" class="visuallyHidden">Comments</label>
+        			<textarea id="fieldwshyr" name="cm-f-wshyr" type="text" placeholder="Your Message" 	class="blockElement "></textarea>
+    			</p>
+    			<input id="fieldjdkjhld" name="cm-f-jdkjhld" type="hidden" value="Marketo Form"/>
+    			<p>
+        			<button type="submit" class="btn btnSkinPrimary blockElement">Send Message</button>
+    			</p>
+			</form>
+		</div>
+	</footer>
+	<%- @getBlock('scripts').toHTML(); %>
+	<script async="" src="//www.google-analytics.com/ga.js"></script>
+	<script>
+		var _gaq=[ ['_setAccount','UA-23810379-1'],['_trackPageview'] ];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+</body>
+</html>

@@ -80,12 +80,28 @@ redirects:
 	- url: 9.html
 	  redirect: /
 ---
-
+<div class="grid">
+	<div class="grid-cell-10-12 grid-push-1-12">
+		<div class="hr"></div>
+	</div>
+</div>
+<div class="grid">
+	<div class="grid-cell-5-12 grid-push-1-12 mobile">
+		<a href="/marketo/" class="promo promo--marketo">
+		<span class="emphasis">Get Mobile With Marketo.</span>
+		 See how Smith &amp; Robot helps marketers put mobile first.
+		</a>
+	</div>
+	<div class="grid-cell-5-12 grid-push-1-12 mobile">
+		<a href="/marketo/" class="promo promo--blog">
+		<span class="emphasis">It's Been Five Years.</span>
+		 Here's what we learned since we opened in 2009.
+		</a>
+	</div>
+</div>
 <article class="contentPane">
 	<div class="grid">
 		<div class="grid-cell-10-12 grid-push-1-12">
-			<div class="hr"></div>
-			<br/><!-- todo: remove -->
 			<%- @insertCarousel('tw-main') %>
 			<br/><!-- todo: remove -->
 			<%- @insertCarousel('ni-k12lab') %>

@@ -7,12 +7,12 @@
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 	<meta property="og:site_name" content="Smith &amp; Robot" />
-	<meta name="description" content="A creative technology agency wired to partner with marketers." />
-	<meta property="og:description" content="A creative technology agency wired to partner with marketers." />
-	<meta property="og:image" content="http://smithandrobot.com/images/logo.png" />
-	<meta property="og:url" content="http://smithandrobot.com" />
-	<meta property="og:title" content="Digital First" />
-	<meta property="og:type" content="website" />
+	<meta name="description" content="<%= @document.description || 'A creative technology agency wired to partner with marketers.' %>" />
+	<meta property="og:description" content="<%= @document.description || 'A creative technology agency wired to partner with marketers.' %>" />
+	<meta property="og:image" content="<%= @document.image || 'http://smithandrobot.com/images/logo.png' %>" />
+	<meta property="og:url" content="<%= @document.url %>" />
+	<meta property="og:title" content="<%= @document.title || 'Digital First' %>" />
+	<meta property="og:type" content="article" />
 	<%- @getBlock('meta').toHTML(); %>
 	<style type="text/css">.sectionPanes .contentPane { display: none; }</style>
 	<%- @getBlock('styles').toHTML(); %>
@@ -39,18 +39,14 @@
 				</div>
 			</div>
 		</header>
-		<div class="sectionPanes">
-			<div class="grid">
-				<div class="grid-cell-10-12 grid-push-1-12">
-					<% for panel in @getCollection('panels').toJSON(): %>
-						<%- panel.contentRendered %>
-					<% end %>
-				</div>
+		<div class="grid">
+			<div class="grid-cell-10-12 grid-push-1-12">
+				<div class="hr"></div>
 			</div>
 		</div>
-	
+		<div id="article">
 		<%- @content %>
-		
+		</div>
 	</div>
 
 	<%- @getBlock('scripts').toHTML(); %>
