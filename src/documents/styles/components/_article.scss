@@ -11,10 +11,6 @@
 		list-style-type: decimal;
 	}
 
-	strong {
-		font-weight:600;
-	}
-
 	em {
 		font-style: italic;
 	}
@@ -38,4 +34,14 @@
 		line-height: 1em;
 		margin: 0 0 0.43em;
 	}
+
+	code {
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		padding: 5px;
+		background-color: #F8F8FF;
+		font-family: monospace;
+		font-size: .8em;
+		color: #000;
+	}	
 }

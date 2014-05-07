@@ -8,14 +8,18 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+strong {
+	font-weight:700;
+}
+
 .textUrgent {
 	color: $urgent;
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .textImportant {
 	color: $important;
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .text-left { text-align: left !important; }
