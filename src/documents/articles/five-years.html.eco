@@ -4,44 +4,40 @@ title: Five Years
 url: articles/five-years.html
 description: This is the article description that appears in the og:description and the meta description.
 ---
-<div class="grid">
-	<div class="grid-cell-8-12 grid-push-2-12 mobile">
-		<h1 class="text-center page-title"><%= @document.title %></h1>
-		<p class="text-center page-subhead">Article Subhead</p>
-		<p>This is the article content. With a <a herf="#">link</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, nam illo ad repudiandae eos sequi animi. Dolores, nam, amet, unde, corporis qui possimus rerum ipsam similique aliquid nobis optio nemo.
-		</p>
-		<h2>This is the Paragraph Title</h2>
+<h1 class="text-center page-title"><%= @document.title %></h1>
+<p class="text-center page-subhead">Article Subhead</p>
+<p>This is the article content. With a <a herf="#">link</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, nam illo ad repudiandae eos sequi animi. Dolores, nam, amet, unde, corporis qui possimus rerum ipsam similique aliquid nobis optio nemo.
+</p>
+<h2>This is the Paragraph Title</h2>
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nemo asperiores explicabo molestiae dolores at repellendus quidem pariatur. Nesciunt, inventore, nostrum consequatur pariatur assumenda temporibus est numquam quo beatae soluta.<br>
+	With an unordered list:<br>
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+	</ul>
+</p>
+<p>
+	<strong>Lorem ipsum</strong> dolor sit amet, consectetur adipisicing elit. Sequi, nesciunt, rem, magnam ullam numquam vitae <em>if you need to emphasise something</em> culpa suscipit tempora facere at omnis vel tempore voluptatem ex praesentium aliquam assumenda and then she said,</p>
+	<blockquote>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nemo asperiores explicabo molestiae dolores at repellendus quidem pariatur. Nesciunt, inventore, nostrum consequatur pariatur assumenda temporibus est numquam quo beatae soluta.<br>
-			With an unordered list:<br>
-			<ul>
-				<li>Item 1</li>
-				<li>Item 2</li>
-				<li>Item 3</li>
-			</ul>
+			It aint easy being a business man.
 		</p>
-		<p>
-			<strong>Lorem ipsum</strong> dolor sit amet, consectetur adipisicing elit. Sequi, nesciunt, rem, magnam ullam numquam vitae <em>if you need to emphasise something</em> culpa suscipit tempora facere at omnis vel tempore voluptatem ex praesentium aliquam assumenda and then she said,</p>
-			<blockquote>
-				<p>
-					It aint easy being a business man.
-				</p>
-				<cite>-Chad Currie</cite>
-			</blockquote>
-			<p>
-				and I Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae enim tenetur dolorem commodi nostrum accusamus. Est, sequi, officiis! Cupiditate tempora ratione autem itaque totam iure molestiae hic error perspiciatis sed.
-			</p>
-		</p>
-		<hr class="hr" />
-		<img src="/images/S&amp;R-Marketo.png" />
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, possimus, laboriosam eaque eos voluptates facere? Sequi, laboriosam, aliquam rem impedit debitis a alias dicta architecto ratione ipsa quo iusto modi! <br>
-			With an ordered list:
-			<ol>
-				<li>Item 1</li>
-				<li>Item 2</li>
-				<li>Item 3</li>
-			</ol>
-		</p>
-	</div>
-</div>
+		<cite>-Chad Currie</cite>
+	</blockquote>
+	<p>
+		and I Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae enim tenetur dolorem commodi nostrum accusamus. Est, sequi, officiis! Cupiditate tempora ratione autem itaque totam iure molestiae hic error perspiciatis sed.
+	</p>
+</p>
+<hr class="hr" />
+<img src="/images/S&amp;R-Marketo.png" />
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, possimus, laboriosam eaque eos voluptates facere? Sequi, laboriosam, aliquam rem impedit debitis a alias dicta architecto ratione ipsa quo iusto modi! <br>
+	With an ordered list:
+	<ol>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+	</ol>
+</p>

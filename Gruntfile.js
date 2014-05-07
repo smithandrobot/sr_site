@@ -12,7 +12,11 @@ module.exports = function(grunt) {
                     'out/scripts/toggle.js',
                     'out/scripts/script.js',
                 ],
-                dest: 'out/scripts/production.js'
+                dest: 'out/scripts/production.js',
+                options: {
+                    sourceMap: true,
+                    sourceMapName: 'out/scripts/production.map'
+                }
             }
         },
 
@@ -70,7 +74,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                   'out/index.html': 'out/index.html',
-                  'out/marketo/index.html': 'out/marketo/index.html'
+                  'out/marketo/index.html': 'out/marketo/index.html',
                 }
             },
         },

@@ -163,8 +163,8 @@ function pauseVideo(iframe) {
     });
   }
   
-  forms('#contactForm', '#contactSuccess', '#contactError');
-  forms('#contactFormMarketo', '#contactSuccessMarketo', '#contactErrorMarketo');
+  if($('#contactForm').length > 0) forms('#contactForm', '#contactSuccess', '#contactError');
+  if($('#contactFormMarketo').length > 0) forms('#contactFormMarketo', '#contactSuccessMarketo', '#contactErrorMarketo');
 
   window.SARMap = {
     mapCenter: new google.maps.LatLng(30.35269,-97.7502),

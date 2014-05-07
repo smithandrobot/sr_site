@@ -39,13 +39,26 @@
 				</div>
 			</div>
 		</header>
+		<div class="sectionPanes">
+			<div class="grid">
+				<div class="grid-cell-10-12 grid-push-1-12">
+					<% for panel in @getCollection('panels').toJSON(): %>
+						<%- panel.contentRendered %>
+					<% end %>
+				</div>
+			</div>
+		</div>
 		<div class="grid">
 			<div class="grid-cell-10-12 grid-push-1-12">
 				<div class="hr"></div>
 			</div>
 		</div>
 		<div id="article">
-		<%- @content %>
+			<div class="grid">
+				<div class="grid-cell-8-12 grid-push-2-12 mobile">
+					<%- @content %>
+				</div>
+			</div>
 		</div>
 	</div>
 

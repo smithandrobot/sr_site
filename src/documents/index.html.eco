@@ -85,7 +85,7 @@ redirects:
 		<div class="hr"></div>
 	</div>
 </div>
-<div class="grid">
+<!-- <div class="grid">
 	<div class="grid-cell-5-12 grid-push-1-12 mobile">
 		<a href="/marketo/" class="promo promo--marketo">
 		<span class="emphasis">Get Mobile With Marketo.</span>
@@ -98,7 +98,7 @@ redirects:
 		 Here's what we learned since we opened in 2009.
 		</a>
 	</div>
-</div>
+</div> -->
 <article class="contentPane">
 	<div class="grid">
 		<div class="grid-cell-10-12 grid-push-1-12">
