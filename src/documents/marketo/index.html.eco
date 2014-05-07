@@ -79,7 +79,7 @@ title: Marketo
 		<div class="grid stack">
 			<!-- Follow this -->
 			<div class="grid-cell-12-12 text-center mobile">
-				<h2 class="large">To the White Board!</h2>
+				<h2 class="large">To the drawing pad!</h2>
 			</div>
 			<div class="grid-cell-2-12 text-center grid-push-2-12 mobile">
 				<img src="/images/how-it-works-1.png">
@@ -99,7 +99,7 @@ title: Marketo
 			</div>
 			<div class="grid-cell-4-12 text-center grid-push-2-12 mobile">
 				<p>
-					Using our Marketo Mobilizing technology platform, we create your mobile responsive templates based on the custom designs we created together.
+					Using our Marketo mobilizing technology platform, we construct rich, interactive, responsive templates based on the custom designs we created together.
 				</p>
 			</div>
 		</div>
@@ -113,7 +113,7 @@ title: Marketo
 			</div>
 			<div class="grid-cell-4-12 text-center grid-push-2-12 mobile">
 				<p>
-					Instead of drag and drop, your team will use our form-based platform just like in their favorite content management system—no design or coding skills required.
+					Instead of drag and drop, your team will use our form-based platform just like in their favorite content management system — no design or coding skills required.
 				</p>
 			</div>
 		</div>
@@ -126,7 +126,7 @@ title: Marketo
 			</div>
 			<div class="grid-cell-4-12 text-center grid-push-2-12 mobile">
 				<p>
-					As soon as you approve your assets, they're mobile. The Marketo Mobilized Templates do all the hard work so you can focus on great content.
+					As soon as you approve your assets, they're mobile. The Marketo mobilized templates do all the hard work so you can focus on great content.
 				</p>
 			</div>
 		</div>
@@ -135,7 +135,7 @@ title: Marketo
 		<div class="grid">
 			<div class="grid-cell-12-12 text-center mobile">
 				<h1 class="large">Let's Talk Mobile</h1>
-				<p class="marketo-subhead">Want to start publishing with Marketo Mobilized Templates.<br>Tell us how your organization works.</p>
+				<p class="marketo-subhead">Want to start publishing with Marketo mobilized templates?<br>Tell us about you.</p>
 			</div>
 		</div>
 
@@ -145,7 +145,7 @@ title: Marketo
 					Thanks for your message.
 				</div>
 				<div class="hidden alert alert-error" id="contactErrorMarketo">
-					This is an error message.
+					Sorry, something went wrong.
 				</div>
 			</div>
 		</div>

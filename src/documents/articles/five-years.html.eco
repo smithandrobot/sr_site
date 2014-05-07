@@ -1,43 +1,42 @@
 ---
 layout: article
-title: Five Years
+title: Five Years. Five Rules.
 url: articles/five-years.html
-description: This is the article description that appears in the og:description and the meta description.
+description: Our hard-earned guidelines for choosing good clients.
 ---
 <h1 class="text-center page-title"><%= @document.title %></h1>
-<p class="text-center page-subhead">Article Subhead</p>
-<p>This is the article content. With a <a herf="#">link</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, nam illo ad repudiandae eos sequi animi. Dolores, nam, amet, unde, corporis qui possimus rerum ipsam similique aliquid nobis optio nemo.
-</p>
-<h2>This is the Paragraph Title</h2>
+<p class="text-center page-subhead">Since opening in 2009, we've developed some hard-earned guidelines for choosing great clients.</p>
+<br>
+
 <p>
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nemo asperiores explicabo molestiae dolores at repellendus quidem pariatur. Nesciunt, inventore, nostrum consequatur pariatur assumenda temporibus est numquam quo beatae soluta.<br>
-	With an unordered list:<br>
-	<ul>
-		<li>Item 1</li>
-		<li>Item 2</li>
-		<li>Item 3</li>
-	</ul>
+In the professional services business, the quality of your client relationships determines your quality of life. We've learned through some hard lessons how to pick clients that are right for us, codifying them into some guidelines over time. We don't <em>always</em> follow these rules ourselves, but when we break them, we <em>always</em> regret it.
 </p>
+
+<h2>1. Get money.</h2>
 <p>
-	<strong>Lorem ipsum</strong> dolor sit amet, consectetur adipisicing elit. Sequi, nesciunt, rem, magnam ullam numquam vitae <em>if you need to emphasise something</em> culpa suscipit tempora facere at omnis vel tempore voluptatem ex praesentium aliquam assumenda and then she said,</p>
-	<blockquote>
-		<p>
-			It aint easy being a business man.
-		</p>
-		<cite>-Chad Currie</cite>
-	</blockquote>
-	<p>
-		and I Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae enim tenetur dolorem commodi nostrum accusamus. Est, sequi, officiis! Cupiditate tempora ratione autem itaque totam iure molestiae hic error perspiciatis sed.
-	</p>
+	Accept only US dollars. Do not accept references, future work, or praise. They just don't arrive. If you truly have time to kill, build something for yourself that you own. Spec or low-rate clients are often the most difficult, but that shouldn't be a surprise. Money imposes parameters and structure, forcing everyone to act right.
 </p>
-<hr class="hr" />
-<img src="/images/S&amp;R-Marketo.png" />
+
+<h2>2. Don't solve others' staffing problems.</h2>
 <p>
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, possimus, laboriosam eaque eos voluptates facere? Sequi, laboriosam, aliquam rem impedit debitis a alias dicta architecto ratione ipsa quo iusto modi! <br>
-	With an ordered list:
-	<ol>
-		<li>Item 1</li>
-		<li>Item 2</li>
-		<li>Item 3</li>
-	</ol>
+	Unless you really are a staffing service, watch out for organizations that only covet your manpower. You want to work for someone that value your unique skill, not your evenings and weekends. Big agencies grudgingly hire smaller agencies (for low margins) because they couldn't attract or retain the in-house talent. Once you take their money, they will expect to flog your team just like employees.
 </p>
+
+<h2>3. Don't take personal money.</h2>
+<p>
+	Watch out for bootstrapped founders and rich uncles. Their money comes with baggage. When someone is spending their own fortune, every decision is emotional and rich with meaning. This world contains plenty of organizations that undramatically budget money to pay for what you do. Find them.
+</p>
+
+<h2>4. Don't finish someone else's work.</h2>
+<p>
+	"How hard could it be" has been said too often about design, writing, coding, project management, you name it. When a prospective customer wants to save money by trying part of the project themselves, know that you will end up doing or redoing that. Feelings will be hurt when you ask to be paid for that time. Don't do it.
+</p>
+
+<h2>5. Don't say "no." Say "how about ..."</h2>
+<p>
+	Rules one through four might make it seem like "no" is the magic word. It's not. Neither is "yes." Instead, think about the conditions (however wild) that will make it your perfect yes. In most cases, we get laughed out of the room. Sometimes, thought, our suggestion is welcome and it leads to a happy relationship.
+</p>
+
+<h2>The One Rule to Rule them All</h2>
+<p> Ask yourself, "will I be bummed if they accept our proposal?"</p>
+
