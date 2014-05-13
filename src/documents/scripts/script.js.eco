@@ -110,8 +110,8 @@ function pauseVideo(iframe) {
         $nameField = $form.find('[name=cm-name]'),
         $emailField = $form.find('[name=cm-jjhhou-jjhhou]'),
         $commentField = $form.find('[name=cm-f-wshyr]'),
-        $sourceField = $form.find('[name=cm-f-jdkjhld]')
-
+        $sourceField = $form.find('[name=cm-f-jdkjhld]'),
+        $charCount = $form.find('.char-count')
 
     hasValidationErrors = function() {
       var error = false;
@@ -140,7 +140,32 @@ function pauseVideo(iframe) {
     };
   
     $($form.find('[name=cm-name],[name=cm-jjhhou-jjhhou],[name=cm-f-wshyr]')).blur(hasValidationErrors);
-  
+    
+    $commentField.on('keyup', function() {
+      var $this = $(this),
+          $el = $('.characters-remaining'),
+          length = $this.val().length,
+          charsLeft = 250 - length,
+          percent = (charsLeft/250),
+          startRed = 57,
+          endRed = 255,
+          startGreen = 181,
+          endGreen = 81,
+          startBlue = 0,
+          endBlue = 51,
+          redDiff = startRed - endRed,
+          greenDiff = startGreen - endGreen,
+          blueDiff = startBlue - endBlue,
+          red = parseInt(redDiff*percent-redDiff),
+          green = parseInt(greenDiff*percent-greenDiff),
+          blue = parseInt(blueDiff*percent-blueDiff)
+
+      $charCount.text(charsLeft);
+      $el.css('color', 'rgb('+(startRed+red)+', '+(startGreen+green)+', '+(startBlue+blue))
+      // start at rgb(57, 181, 0)
+      // end rgb(255, 81, 51)
+    })
+
     $form.submit(function(e) {
       e.preventDefault();
   

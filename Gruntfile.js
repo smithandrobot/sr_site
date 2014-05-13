@@ -43,9 +43,12 @@ module.exports = function(grunt) {
                         },
                     ]
                 },
-                files: [
-                        {expand: true, flatten: true, src: ['out/index.html'], dest: 'out'}
-                    ]
+                files: [{
+                         expand: true,
+                         cwd: 'out',
+                         src: ['**/*.html'], 
+                         dest: 'out/'
+                       }]
             },
             buildcss: {
                 options:{
@@ -62,7 +65,12 @@ module.exports = function(grunt) {
                         }
                     ]
                 },
-                files: [{expand: true, flatten: true, src: ['out/index.html'], dest: 'out'}]
+                files: [{
+                         expand: true, 
+                         cwd: 'out',
+                         src: ['**/*.html'], 
+                         dest: 'out/'
+                       }]
             }
         },
 
@@ -72,10 +80,12 @@ module.exports = function(grunt) {
                   removeComments: true,
                   collapseWhitespace: true
                 },
-                files: {
-                  'out/index.html': 'out/index.html',
-                  'out/marketo/index.html': 'out/marketo/index.html',
-                }
+                files: [{
+                    expand: true,
+                    cwd: 'out/',
+                    src: ['**/*.html'],
+                    dest: 'out/',
+                }]
             },
         },
 
@@ -114,9 +124,9 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'concat:build', 
         'uglify:build',
+        'cssmin', 
         'replace:buildjs', 
         'replace:buildcss',
-        'cssmin', 
         'htmlmin']);
 
 }

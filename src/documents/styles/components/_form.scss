@@ -30,6 +30,14 @@ textarea { min-height: 15em; }
 ::-moz-placeholder { color: #ccc; }
 :-ms-input-placeholder { color: #ccc; }
 
+.characters-remaining {
+	margin: -10px 0 0 0;
+	padding: 0;
+	font-size: 0.8em;
+	/* text-align: right; */
+	color: #39b500;
+}
+
 #contactForm-marketo {
 	button {
 		background: $urgent;
