@@ -131,6 +131,13 @@ title: Marketo
 			</div>
 		</div>
 	</div>
+<article class="contentPane" style="padding: 2em 0; background-color:#eeeeee; margin-top:1em;">
+	<div class="grid">
+		<div class="grid-cell-10-12 grid-push-1-12">
+			<%- @insertCarousel('responsive') %>		</div>
+	</div>
+</article>
+
 	<footer>
 		<div class="grid">
 			<div class="grid-cell-12-12 text-center mobile">
@@ -149,7 +156,6 @@ title: Marketo
 				</div>
 			</div>
 		</div>
-
 		<div class="grid">
 			<form action="http://subscribers.smithandrobot.com/t/r/s/jjhhou/" method="post" id="contactFormMarketo" class="grid-cell-6-12 grid-push-3-12 mobile">
     			<p>
