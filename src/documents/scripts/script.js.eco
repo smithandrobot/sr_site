@@ -107,10 +107,9 @@ function pauseVideo(iframe) {
     var $form = $(selector),
         $formSuccess = $(successSelector),
         $formError = $(errorSelector),
-        $nameField = $form.find('[name=cm-name]'),
-        $emailField = $form.find('[name=cm-jjhhou-jjhhou]'),
-        $commentField = $form.find('[name=cm-f-wshyr]'),
-        $sourceField = $form.find('[name=cm-f-jdkjhld]'),
+        $nameField = $form.find('[name=name]'),
+        $emailField = $form.find('[name=email]'),
+        $commentField = $form.find('[name=comments]'),
         $charCount = $form.find('.char-count')
 
     hasValidationErrors = function() {
@@ -139,7 +138,7 @@ function pauseVideo(iframe) {
       return error;
     };
   
-    $($form.find('[name=cm-name],[name=cm-jjhhou-jjhhou],[name=cm-f-wshyr]')).blur(hasValidationErrors);
+    $($form.find('[name=name],[name=email],[name=comments]')).blur(hasValidationErrors);
     
     $commentField.on('keyup', function() {
       var $this = $(this),
@@ -168,23 +167,22 @@ function pauseVideo(iframe) {
 
     $form.submit(function(e) {
       e.preventDefault();
-  
       if (hasValidationErrors()) return;
-  
       $formError.fadeOut();
       
-      $.getJSON(
-        this.action + "?callback=?",
-        $(this).serialize(),
-        function(data) {
-          if (data.Status == 400) {
-            $formError.text(data.Message);
-            $formError.fadeIn();
-          } else {
-            $formSuccess.fadeIn();
-            $form.fadeOut();
-          }
-        });
+      $.ajax({
+        type: 'POST',
+        url: this.action,
+        data: $(this).serialize(),
+        success: function(data) {
+          $formSuccess.fadeIn();
+          $form.fadeOut();
+        },
+        error: function(msg) {
+          $formError.text(msg);
+          $formError.fadeIn();
+        }
+      });
     });
   }
   
