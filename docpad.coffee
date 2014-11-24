@@ -44,8 +44,8 @@ docpadConfig = {
 
 	events:
 		docpadLoaded: ->
-			if (docpad.getEnvironment() != 'development')
-				docpad.getConfig().plugins.grunt.writeAfter = [] # default task
+			if (@docpad.getEnvironment() != 'development')
+				@docpad.getConfig().plugins.grunt.writeAfter = [] # default task
 			
 	collections:
 		panels: ->

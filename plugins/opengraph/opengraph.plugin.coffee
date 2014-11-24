@@ -10,7 +10,6 @@ module.exports = (BasePlugin) ->
             defaults: {}
 
         writeBefore: (opts) ->
-            docPad = @docPad
             config = @getConfig()
             pristine = config.defaults
 

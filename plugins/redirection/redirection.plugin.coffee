@@ -20,8 +20,8 @@ module.exports = (BasePlugin) ->
 
 		writeAfter: (opts, next) ->
 			{collection, templateData} = opts
-			docPad = @docPad
-			docPadConfig = docpad.getConfig()
+			docpad = @docpad
+			docpadConfig = docpad.getConfig()
 			config = @getConfig()
 			safefs = require('safefs')
 			pathUtil = require('path')
@@ -45,7 +45,7 @@ module.exports = (BasePlugin) ->
 
 			getCleanOutPathFromUrl = (url) ->
 				url = url.replace(/\/+$/, '') # remove leading slashes
-				url = docPadConfig.outPath + '/' + url
+				url = docpadConfig.outPath + '/' + url
 
 			collection.each (model, cbEach) ->
 				redirects = []
