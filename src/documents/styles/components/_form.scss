@@ -51,3 +51,6 @@ textarea { min-height: 15em; }
 		width: 100%;
 	}
 }
+
+// honeypot field
+#contactForm input + p + p { display: none; }
