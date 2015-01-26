@@ -22,7 +22,7 @@ docpadConfig = {
 			defaults:
 				scripts: [
 					'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
-					'//maps.google.com/maps/api/js?sensor=false',
+					# '//maps.google.com/maps/api/js?sensor=false',
 					'/scripts/lib/picturefill.js',
 					'/scripts/lib/jquery.fitvid.js',
 					'/scripts/owl.carousel.js',

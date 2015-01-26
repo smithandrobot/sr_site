@@ -225,8 +225,8 @@ function pauseVideo(iframe) {
     }
   }
 
-  google.maps.event.addDomListener(window, 'load', SARMap.initialize);
-  google.maps.event.addDomListener(window, 'resize', SARMap.center);
+  // google.maps.event.addDomListener(window, 'load', SARMap.initialize);
+  // google.maps.event.addDomListener(window, 'resize', SARMap.center);
 
   <% if (@getEnvironment() != 'development'): %>
   var _gaq=[ ['_setAccount','UA-23810379-1'],['_trackPageview'] ]; // Change UA-XXXXX-X to be your site's ID
