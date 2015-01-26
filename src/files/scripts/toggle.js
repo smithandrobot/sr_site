@@ -12,15 +12,15 @@
 		} else if ($active) {
 			$($active.data('target')).slideUp(function() {
 				$($clicked.data('target')).slideDown(function() {
-					SARMap.resize();
-					SARMap.center();
+					// SARMap.resize();
+					// SARMap.center();
 				});
 				$active = $clicked;
 			});
 		} else {
 			$($clicked.data('target')).slideDown(function() {
-				SARMap.resize();
-				SARMap.center();
+				// SARMap.resize();
+				// SARMap.center();
 			});
 			$active = $clicked;
 		}
