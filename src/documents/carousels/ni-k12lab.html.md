@@ -1,6 +1,6 @@
 ---
 title: K12Lab
-subtitle: for National Instruments: Branding, Writing, Design, Development 
+subtitle: for National Instruments: Brand ID, Design, Writing, Development 
 slides:
     - ni-k12lab-detail
     - ni-k12lab-desktop

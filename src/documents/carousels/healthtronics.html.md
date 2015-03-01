@@ -1,6 +1,6 @@
 ---
 title: HealthTronics.com
-subtitle: Writing, Design, Development 
+subtitle: Design, Writing, Development 
 slides:
     - healthtronics-phone
     - healthtronics-desktop

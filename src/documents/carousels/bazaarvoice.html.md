@@ -1,6 +1,6 @@
 ---
 title: Bazaarvoice Developer Portal
-subtitle: Writing, Design, Development
+subtitle: Design, Writing, Development
 slides:
     - bazaarvoice-detail
     - bazaarvoice-desktop

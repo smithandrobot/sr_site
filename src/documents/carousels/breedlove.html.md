@@ -1,6 +1,6 @@
 ---
 title: Breedlove
-subtitle: Branding, Writing, Design, Development 
+subtitle: Design, Writing, Development 
 slides:
     - breedlove-print
 hash: breedlove

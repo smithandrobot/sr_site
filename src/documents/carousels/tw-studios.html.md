@@ -1,6 +1,6 @@
 ---
 title: ThoughtWorks Studios
-subtitle: Branding, Writing, Design, Development 
+subtitle: Brand ID, Design, Writing, Development 
 slides:
     - tw-studios-ipad
     - tw-studios-branding

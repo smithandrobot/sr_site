@@ -7,17 +7,17 @@
     "npm": "1.3"
   },
   "dependencies": {
-    "docpad": "~6.69.1",
-    "docpad-plugin-marked": "~2.2.1",
-    "docpad-plugin-eco": "~2.0.3",
+    "docpad": "~6.70.1",
+    "docpad-plugin-marked": "~2.3.0",
+    "docpad-plugin-eco": "~2.1.0",
     "docpad-plugin-livereload": "~2.6.0",
-    "docpad-plugin-sass": "~2.7.1",
+    "docpad-plugin-sass": "~2.7.3",
     "docpad-plugin-ghpages": "~2.4.3",
     "extend": "1.2.1",
     "mkdirp": "0.3.5",
     "safefs": "3.1.0",
     "taskgroup": "3.3.1",
-    "docpad-plugin-thumbnails": "~2.1.1"
+    "docpad-plugin-thumbnails": "~2.1.2"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

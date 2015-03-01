@@ -1,6 +1,6 @@
 ---
 title: TheresaNeil.com
-subtitle: Branding, Design
+subtitle: Brand ID, Design
 slides:
     - tneil-logo
     - tneil-phone

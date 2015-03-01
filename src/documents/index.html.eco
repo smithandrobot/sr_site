@@ -88,7 +88,7 @@ redirects:
 
 <div class="grid">
 	<div class="grid-cell-10-12 grid-push-1-12">
-		<h2 class="h1">Be great online <small>with the creative technology agency wired to partner with marketers.</small>
+		<h2 class="h1"><small>A Curious Digital Branding Agency</small>
 	</div>
 </div>
 <br>
@@ -110,7 +110,11 @@ redirects:
 <article class="contentPane">
 	<div class="grid">
 		<div class="grid-cell-10-12 grid-push-1-12">
+			<%- @insertCarousel('highops') %>
+			<br/><!-- todo: remove -->
 			<%- @insertCarousel('tw-main') %>
+			<br/><!-- todo: remove -->
+			<%- @insertCarousel('grokker') %>
 			<br/><!-- todo: remove -->
 			<%- @insertCarousel('ni-k12lab') %>
 			<br/><!-- todo: remove -->
