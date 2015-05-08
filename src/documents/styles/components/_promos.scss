@@ -20,6 +20,9 @@
 		&.promo--blog {
 			background-color: #333;
 		}
+		&.promo--ruleofreactions {
+			background-color: #333;
+		}
 	}
 	
 	.emphasis { font-weight: 700;}
@@ -30,9 +33,15 @@
 		background-image: url("/images/promo-marketo.png");
 	}
 
-	&.promo--blog {
+	&.promo--five-years {
 		background-color: $background;
 		color: #FFF;
 		background-image: url("/images/promo-5.png");
+	}
+
+	&.promo--ruleofreactions {
+		background-color: $background;
+		color: #FFF;
+		background-image: url("/images/promo-rule-of-reactions.png");
 	}
 }

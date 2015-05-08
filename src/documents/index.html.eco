@@ -88,7 +88,7 @@ redirects:
 
 <div class="grid">
 	<div class="grid-cell-10-12 grid-push-1-12">
-		<h2 class="h1"><small>A Curious Digital Branding Agency</small>
+		<h2 class="h1">Brand Strategies for Digital Businesses
 	</div>
 </div>
 <br>
@@ -100,9 +100,9 @@ redirects:
 		</a>
 	</div>
 	<div class="grid-cell-5-12 grid-push-1-12 mobile">
-		<a href="/articles/five-years.html" class="promo promo--blog">
-		<span class="emphasis">Five Years. Five Rules.</span>
-		 Our hard-earned guidelines for choosing great clients.
+		<a href="/articles/rule-of-reactions.html" class="promo promo--ruleofreactions">
+		<span class="emphasis">The Rule of Reactions.</span>
+		 Don't ask me a lot of questions. Show me options and let me react.
 		</a>
 	</div>
 </div>
